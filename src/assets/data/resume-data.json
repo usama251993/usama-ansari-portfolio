@@ -1,0 +1,100 @@
+{
+  "contacts": [
+    {
+      "icon": {
+        "prefix": "fas",
+        "name": "envelope",
+        "size": "lg"
+      },
+      "detail": {
+        "title": "Mail",
+        "clickAction": "mailto:usama251993@gmail.com",
+        "content": "usama251993@gmail.com"
+      }
+    },
+    {
+      "icon": {
+        "prefix": "fas",
+        "name": "phone",
+        "size": "lg",
+        "rotate": "90"
+      },
+      "detail": {
+        "title": "Phone",
+        "content": "+91 80977 28350"
+      }
+    },
+    {
+      "icon": {
+        "prefix": "fas",
+        "name": "map-marker-alt",
+        "size": "lg"
+      },
+      "detail": {
+        "title": "Residence",
+        "clickAction": "https://goo.gl/maps/3dH5Br37h5zWHtNMA",
+        "content": "Thane, Maharashtra"
+      }
+    },
+    {
+      "icon": {
+        "prefix": "fas",
+        "name": "globe-americas",
+        "size": "lg"
+      },
+      "detail": {
+        "title": "Website",
+        "clickAction": "",
+        "content": "Usama Ansari"
+      }
+    },
+    {
+      "icon": {
+        "prefix": "fab",
+        "name": "linkedin",
+        "size": "lg"
+      },
+      "detail": {
+        "title": "LinkedIn",
+        "clickAction": "",
+        "content": "Usama Ansari"
+      }
+    },
+    {
+      "icon": {
+        "prefix": "fab",
+        "name": "bitbucket",
+        "size": "lg"
+      },
+      "detail": {
+        "title": "Bitbucket",
+        "clickAction": "",
+        "content": "usama251993"
+      }
+    },
+    {
+      "icon": {
+        "prefix": "fab",
+        "name": "facebook",
+        "size": "lg"
+      },
+      "detail": {
+        "title": "Facebook",
+        "clickAction": "",
+        "content": "Usama Ansari"
+      }
+    },
+    {
+      "icon": {
+        "prefix": "fab",
+        "name": "instagram",
+        "size": "lg"
+      },
+      "detail": {
+        "title": "Instagram",
+        "clickAction": "",
+        "content": "@usama251993"
+      }
+    }
+  ]
+}
