@@ -1,86 +1,37 @@
-<div class="container">
-  <div class="profile-section-holder">
-    <div class="profile-section">
-
+<div class="container"
+  *ngIf="isDataLoaded; else loadingData">
+  <div class="profile-holder">
+    <div class="profile-photo-holder">
+      <div class="profile-photo"></div>
     </div>
-    <div class="profile-section">
-
+    <div class="description-holder">
+      <div class="description"
+        *ngFor="let singleDescription of resumeData.profile.description.statements">
+        <span>{{ singleDescription }}</span>
+      </div>
     </div>
-    <div class="profile-section">
-      <div class="contact-holder">
-        <div class="contact">
-          <div class="contact-icon">
-            <fa-icon [icon]="['fas', 'envelope']"
-              size="2x"></fa-icon>
-          </div>
-          <div class="contact-detail">
-            <span title="">usama251993@gmail.com</span>
-          </div>
+
+    <div class="separator light-separator"></div>
+
+    <div class="contact-holder">
+      <div class="contact"
+        *ngFor="let singleContact of resumeData.profile.contacts; let index = index"
+        (click)="doNothing()">
+        <div class="contact-icon">
+          <fa-icon [icon]="[singleContact.icon.prefix, singleContact.icon.name]"
+            [size]="singleContact.icon.size"
+            [rotate]="singleContact.icon.rotate"></fa-icon>
         </div>
-        <div class="contact">
-          <div class="contact-icon">
-            <fa-icon [icon]="['fas', 'phone']"
-              size="2x"></fa-icon>
-          </div>
-          <div class="contact-detail">
-            <span title=""></span>
-          </div>
-        </div>
-        <div class="contact">
-          <div class="contact-icon">
-            <fa-icon [icon]="['fas', 'map-marker-alt']"
-              size="2x"></fa-icon>
-          </div>
-          <div class="contact-detail">
-            <span title=""></span>
-          </div>
-        </div>
-        <div class="contact">
-          <div class="contact-icon">
-            <fa-icon [icon]="['fas', 'globe-asia']"
-              size="2x"></fa-icon>
-          </div>
-          <div class="contact-detail">
-            <span title=""></span>
-          </div>
-        </div>
-        <div class="contact">
-          <div class="contact-icon">
-            <fa-icon [icon]="['fab', 'linkedin']"
-              size="2x"></fa-icon>
-          </div>
-          <div class="contact-detail">
-            <span title=""></span>
-          </div>
-        </div>
-        <div class="contact">
-          <div class="contact-icon">
-            <fa-icon [icon]="['fab', 'bitbucket']"
-              size="2x"></fa-icon>
-          </div>
-          <div class="contact-detail">
-            <span title=""></span>
-          </div>
-        </div>
-        <div class="contact">
-          <div class="contact-icon">
-            <fa-icon [icon]="['fab', 'facebook']"
-              size="2x"></fa-icon>
-          </div>
-          <div class="contact-detail">
-            <span title=""></span>
-          </div>
-        </div>
-        <div class="contact">
-          <div class="contact-icon">
-            <fa-icon [icon]="['fab', 'instagram']"
-              size="2x"></fa-icon>
-          </div>
-          <div class="contact-detail">
-            <span title=""></span>
-          </div>
+        <div class="contact-detail">
+          <!-- <span [title]="singleContact.detail.attributeTitle">{{ singleContact.detail.content }}</span> -->
+          <span>{{ singleContact.detail.content }}</span>
         </div>
       </div>
     </div>
   </div>
 </div>
+<ng-template #loadingData>
+  <div class="container">
+    <span>Loading...</span>
+  </div>
+</ng-template>

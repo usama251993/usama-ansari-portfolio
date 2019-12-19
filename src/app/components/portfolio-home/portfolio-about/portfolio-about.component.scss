@@ -1,0 +1,52 @@
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+div.profile-holder {
+  flex: 1;
+  background-color: #3f51b5;
+  color: #fafafa;
+
+  div.profile-photo-holder {
+    align-self: center;
+    border-radius: 50%;
+    border: 2px solid;
+    padding: 2px;
+    margin: 16px;
+
+    div.profile-photo {
+      width: 160px;
+      height: 160px;
+      /* background-image: url('profile.jpg'); */
+      background-position: top;
+      background-size: cover;
+      border-radius: 50%;
+    }
+  }
+
+  div.description-holder {
+    padding: 0px 16px;
+    margin: 8px 0px;
+  }
+
+  div.contact-holder {
+    padding: 0px 16px;
+    margin-top: 8px;
+
+    div.contact {
+      flex-direction: row;
+      align-items: center;
+      margin: 8px 0px;
+      cursor: default;
+
+      div.contact-icon {
+        margin-right: 4px;
+      }
+
+      div.contact-detail {
+        margin-left: 4px;
+      }
+    }
+  }
+}

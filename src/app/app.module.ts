@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { PortfolioAboutComponent } from './components/portfolio-home/portfolio-a
 import { PortfolioProfileDocumentsComponent } from './components/portfolio-home/portfolio-profile-documents/portfolio-profile-documents.component';
 import { PortfolioErrorComponent } from './components/portfolio-error/portfolio-error.component';
 
+import { PortfolioCoreService } from './services/portfolio-core.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,9 +34,12 @@ import { PortfolioErrorComponent } from './components/portfolio-error/portfolio-
     AppRoutingModule,
     BrowserAnimationsModule,
     AppMaterialModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    PortfolioCoreService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
