@@ -121,27 +121,166 @@
     "designation": "Senior Software Engineer"
   },
   "workExperience": {
-    "projects": {
-      "tenure": {
-        "from": "",
-        "to": "",
-        "duration": ""
+    "projects": [
+      {
+        "tenure": {
+          "from": "2015-06-30T18:30:00.000Z",
+          "to": "2019-09-30T18:30:00.000Z"
+        },
+        "description": {
+          "title": "ENOVIA PLM",
+          "role": "Senior Software Engineer",
+          "overviews": [
+            "ENOVIA is a Product Lifecycle Management software which is developed and maintained by Dassault Systems",
+            "This project involves development and support of two modules of ENOVIA PLM, namely ENOVIA Costing and Analytics Foundation and ENOVIA Buyer Analytics",
+            "The former module enables user to analyze the cost of an object right from where it has been created up to its time of release",
+            "The latter module helps user decide the best supplier for the materials quoted for outsourcing"
+          ],
+          "responsibilities": [
+            "Initiate and monitor the installation of client software on the server grade as well as the local machines",
+            "Setup of Oracle 12C Database, creation of one container and three pluggable databases and configuration of the same",
+            "Generate and test scripts to enforce automation of most repeated procedures during the installation and post installation of the software",
+            "Implementation of functional enhancements requested by client",
+            "Development of client-side web pages",
+            "Development, testing and handover of the final deliverables",
+            "Testing of the application and generation of appropriate reports",
+            "Creation and maintenance of documents concerned with project, training and practice"
+          ],
+          "skills": [
+            "Java 8",
+            "JSP",
+            "EJB",
+            "Servlet",
+            "Eclipse MARS",
+            "Eclipse Oxygen",
+            "Apache Tomcat",
+            "VNC Viewer",
+            "PuTTY"
+          ]
+        }
       },
-      "description": {
-        "title": "",
-        "role": "",
-        "overviews": [],
-        "responsibilities": [],
-        "skills": []
+      {
+        "tenure": {
+          "from": "2018-03-31T18:30:00.000Z",
+          "to": "2018-08-31T18:30:00.000Z"
+        },
+        "description": {
+          "title": "TopHat Industries Limited",
+          "role": "Senior Software Engineer",
+          "overviews": [
+            "TopHat is a UK based housing & real estate business corporation which relies on data stored in the Excel format to keep track of various activities",
+            "This project required development of inventory management and payroll calculation modules",
+            "The inventory management and payroll calculation modules involved numerous manual input from the user which resulted in inaccurate results much often",
+            "Additionally, TopHat Corporate Limited wanted to develop and deploy their official website on the Internet using WordPress"
+          ],
+          "responsibilities": [
+            "Analysis of existing formats of Excel Workbooks used by TopHat and suggest modifications which would aid accuracy of the data",
+            "Design of VBA Macros to perform automation of the Excel Workbooks to populate and update those fields which did not necessarily require inputs from the user",
+            "Handle the updating of interlinked data from operations tracker and inventory management workbooks to align it with the Project Plan Gantt Chart",
+            "Computation of Employee Payroll based on attendance",
+            "Deployment of TopHat Website on the internet using WordPress"
+          ],
+          "skills": [
+            "Microsoft Excel 2016",
+            "Microsoft Project Plan",
+            "Microsoft Visual Studio Code",
+            "WordPress"
+          ]
+        }
       }
-    }
+    ]
   },
   "expertise": {
     "skillset": [
       {
-        "type": "",
-        "name": "",
-        "rating": 0
+        "type": "primitive",
+        "name": "HTML5",
+        "rating": 9
+      },
+      {
+        "type": "primitive",
+        "name": "CSS3",
+        "rating": 10
+      },
+      {
+        "type": "primitive",
+        "name": "JavaScript",
+        "rating": 8
+      },
+      {
+        "type": "primitive",
+        "name": "Python",
+        "rating": 6
+      },
+      {
+        "type": "primitive",
+        "name": "Java",
+        "rating": 5
+      },
+      {
+        "type": "primitive",
+        "name": "MySQL",
+        "rating": 6
+      },
+      {
+        "type": "framework",
+        "name": "Angular 2+",
+        "rating": 8
+      },
+      {
+        "type": "framework",
+        "name": "Bootstrap",
+        "rating": 9
+      },
+      {
+        "type": "framework",
+        "name": "SASS",
+        "rating": 9
+      },
+      {
+        "type": "framework",
+        "name": "jQuery",
+        "rating": 8
+      },
+      {
+        "type": "framework",
+        "name": "Pug",
+        "rating": 6
+      },
+      {
+        "type": "tool",
+        "name": "Adobe Photoshop CC 2019",
+        "rating": 8
+      },
+      {
+        "type": "tool",
+        "name": "Adobe Lightroom CC 2019",
+        "rating": 8
+      },
+      {
+        "type": "tool",
+        "name": "Git SCM",
+        "rating": 9
+      },
+      {
+        "type": "tool",
+        "name": "Google Cloud Platform",
+        "rating": 7
+      },
+      {
+        "type": "tool",
+        "name": "Microsoft Visual Studio Code",
+        "rating": 8
+      },
+      {
+        "type": "tool",
+        "name": "Microsoft Office 2016",
+        "rating": 8
+      },
+      {
+        "type": "tool",
+        "name": "Microsoft Windows 10",
+        "rating": 8
       }
     ],
     "certifications": [

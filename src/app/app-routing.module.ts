@@ -5,6 +5,7 @@ import { PortfolioAboutComponent } from './components/portfolio-home/portfolio-a
 import { PortfolioProfileDocumentsComponent } from './components/portfolio-home/portfolio-profile-documents/portfolio-profile-documents.component';
 import { PortfolioProjectsComponent } from './components/portfolio-home/portfolio-projects/portfolio-projects.component';
 import { PortfolioErrorComponent } from './components/portfolio-error/portfolio-error.component';
+import { PortfolioMeterComponent } from './components/portfolio-home/portfolio-about/portfolio-meter/portfolio-meter.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  // Temporary route
+  {
+    path: 'meter',
+    component: PortfolioMeterComponent
   },
   {
     path: 'error',

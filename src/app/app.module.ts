@@ -19,6 +19,7 @@ import { PortfolioProfileDocumentsComponent } from './components/portfolio-home/
 import { PortfolioErrorComponent } from './components/portfolio-error/portfolio-error.component';
 
 import { PortfolioCoreService } from './services/portfolio-core.service';
+import { PortfolioMeterComponent } from './components/portfolio-home/portfolio-about/portfolio-meter/portfolio-meter.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PortfolioCoreService } from './services/portfolio-core.service';
     PortfolioProjectsComponent,
     PortfolioAboutComponent,
     PortfolioProfileDocumentsComponent,
-    PortfolioErrorComponent
+    PortfolioErrorComponent,
+    PortfolioMeterComponent
   ],
   imports: [
     BrowserModule,

@@ -18,7 +18,8 @@ export class PortfolioCoreService {
       console.error(error.error.message);
     } else {
       console.log('Server Error!');
-      console.error('Details : ' + error.error);
+      console.error('Details');
+      console.error(error.error);
     }
 
     return throwError('Some Error!');
@@ -28,8 +29,7 @@ export class PortfolioCoreService {
     return this.http.get<any>(configURL, { observe: 'response' })
       .pipe(
         retry(3),
-        catchError(this.handleError),
-        // map((response: HttpResponse<any>) => { console.log(response.body); return response.body })
+        catchError(this.handleError)
       );
   }
 

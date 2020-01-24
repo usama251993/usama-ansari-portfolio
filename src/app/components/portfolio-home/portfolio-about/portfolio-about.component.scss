@@ -1,51 +1,173 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$light-font: #fafafa;
+$dark-font: #212121;
+
+$light-background: mat-palette($mat-gray);
+$dark-background: mat-palette($mat-indigo);
+
 div {
   display: flex;
   flex-direction: column;
 }
 
-div.profile-holder {
-  flex: 1;
-  background-color: #3f51b5;
-  color: #fafafa;
+div.container {
+  flex-direction: row;
+  min-height: 100vh;
 
-  div.profile-photo-holder {
-    align-self: center;
-    border-radius: 50%;
-    border: 2px solid;
-    padding: 2px;
-    margin: 16px;
+  div.profile-holder {
+    flex: 1;
+    // background-color: mat-color($dark-background);
+    // color: $light-font;
+    // background-color: mat-color($light-background);
+    // color: $dark-font;
 
-    div.profile-photo {
-      width: 160px;
-      height: 160px;
-      /* background-image: url('profile.jpg'); */
-      background-position: top;
-      background-size: cover;
+    div.profile-photo-holder {
+      align-self: center;
       border-radius: 50%;
+      border: 2px solid;
+      padding: 2px;
+      margin: 16px;
+
+      div.profile-photo {
+        width: 160px;
+        height: 160px;
+        // background-image: url('/assets/media/images/usama-mini.jpg');
+        background-position: top;
+        background-size: cover;
+        border-radius: 50%;
+      }
+    }
+
+    div.profile-about-contact-holder {
+      padding: 0px 16px;
+
+      mat-accordion {
+        mat-expansion-panel {
+          div.expansion-panel-content {
+            div.contact-holder {
+              align-items: flex-start;
+
+              div.contact {
+                flex-direction: row;
+                align-items: center;
+                margin: 8px 0px;
+                cursor: pointer;
+
+                div.contact-icon {
+                  margin-right: 4px;
+                }
+
+                div.contact-detail {
+                  margin-left: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
-  div.description-holder {
-    padding: 0px 16px;
-    margin: 8px 0px;
-  }
+  div.content-holder {
+    flex: 3;
 
-  div.contact-holder {
-    padding: 0px 16px;
-    margin-top: 8px;
+    div.content {
+      div.content-header-holder {
+        margin-bottom: 16px;
 
-    div.contact {
-      flex-direction: row;
-      align-items: center;
-      margin: 8px 0px;
-      cursor: default;
+        div.content-header {
+          text-transform: uppercase;
+          padding: 16px;
 
-      div.contact-icon {
-        margin-right: 4px;
+          div.full-name-holder {
+            div.full-name {
+              font-size: 72px;
+              font-weight: bold;
+              font-family: 'Calibri', sans-serif;
+            }
+          }
+
+          div.designation-holder {
+            div.designation {
+              font-size: 24px;
+            }
+          }
+        }
       }
 
-      div.contact-detail {
-        margin-left: 4px;
+      div.content-description-holder {
+        margin-top: 16px;
+
+        div.content-description {
+          padding: 16px;
+
+          mat-accordion {
+            mat-expansion-panel {
+              div.expansion-panel-content {
+                // flex-flow: row wrap;
+                // justify-content: space-around;
+                mat-card {
+                  margin: 16px;
+                  mat-card-content {
+                    div.project-detail-holder {
+                      flex-direction: row;
+
+                      div.project-tenure-holder {
+                        padding: 16px;
+
+                        div.project-tenure {
+                          width: 200px;
+                          align-items: center;
+
+                          div.date-holder {
+                            align-items: center;
+                            margin: 8px 0px;
+
+                            div.date-number {
+                              font-size: 20px;
+                            }
+                          }
+
+                          div.tenure-holder {
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+
+                            div.tenure-number {
+                              margin: 0px 8px;
+                              font-size: 48px;
+                            }
+                          }
+                        }
+                      }
+
+                      div.project-description-holder {
+                        padding: 16px;
+
+                        div.project-description {
+                          div.project-description-entity {
+                            margin-bottom: 8px;
+                            div.project-entity-heading {
+                              font-size: 24px;
+                            }
+                            div.project-entity-content {
+                              div.project-description-holder {
+                                div.project-description {
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

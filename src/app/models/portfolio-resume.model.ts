@@ -33,7 +33,6 @@ export interface PortfolioResumeModel {
       tenure: {
         from: Date,
         to: Date,
-        duration?: Date
       },
       description: {
         title: string,
