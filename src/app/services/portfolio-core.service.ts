@@ -18,14 +18,13 @@ export class PortfolioCoreService {
       console.error(error.error.message);
     } else {
       console.log('Server Error!');
-      console.error('Details');
       console.error(error.error);
     }
 
-    return throwError('Some Error!');
+    return throwError('Unknown Error!');
   }
 
-  getHTTPForURL(configURL: string): Observable<any> {
+  getHTTPResponseForURL(configURL: string): Observable<any> {
     return this.http.get<any>(configURL, { observe: 'response' })
       .pipe(
         retry(3),

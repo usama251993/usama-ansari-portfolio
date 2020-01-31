@@ -16,10 +16,14 @@ import { PortfolioHomeComponent } from './components/portfolio-home/portfolio-ho
 import { PortfolioProjectsComponent } from './components/portfolio-home/portfolio-projects/portfolio-projects.component';
 import { PortfolioAboutComponent } from './components/portfolio-home/portfolio-about/portfolio-about.component';
 import { PortfolioProfileDocumentsComponent } from './components/portfolio-home/portfolio-profile-documents/portfolio-profile-documents.component';
+import { PortfolioWorkExperienceComponent } from './components/portfolio-home/portfolio-about/portfolio-work-experience/portfolio-work-experience.component';
+import { PortfolioSkillsComponent } from './components/portfolio-home/portfolio-about/portfolio-skills/portfolio-skills.component';
+import { PortfolioMeterComponent } from './components/portfolio-home/portfolio-about/portfolio-meter/portfolio-meter.component';
+import { PortfolioCertificationsComponent } from './components/portfolio-home/portfolio-about/portfolio-certifications/portfolio-certifications.component';
+import { PortfolioMiscellaneousComponent } from './components/portfolio-home/portfolio-about/portfolio-miscellaneous/portfolio-miscellaneous.component';
 import { PortfolioErrorComponent } from './components/portfolio-error/portfolio-error.component';
 
 import { PortfolioCoreService } from './services/portfolio-core.service';
-import { PortfolioMeterComponent } from './components/portfolio-home/portfolio-about/portfolio-meter/portfolio-meter.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { PortfolioMeterComponent } from './components/portfolio-home/portfolio-a
     PortfolioAboutComponent,
     PortfolioProfileDocumentsComponent,
     PortfolioErrorComponent,
-    PortfolioMeterComponent
+    PortfolioMeterComponent,
+    PortfolioWorkExperienceComponent,
+    PortfolioSkillsComponent,
+    PortfolioCertificationsComponent,
+    PortfolioMiscellaneousComponent
   ],
   imports: [
     BrowserModule,

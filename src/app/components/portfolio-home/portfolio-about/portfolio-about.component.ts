@@ -20,12 +20,12 @@ export const tooltipDefaults: MatTooltipDefaultOptions = {
 })
 export class PortfolioAboutComponent implements OnInit {
 
-  resumeData: PortfolioResumeModel;
+  resumeData: PortfolioResumeModel = null;
   isDataLoaded: boolean = false;
   resumeURL: string = '';
 
   constructor(
-    private portfolioService: PortfolioCoreService
+    private portfolioService: PortfolioCoreService,
   ) { }
 
   ngOnInit() {
@@ -34,9 +34,9 @@ export class PortfolioAboutComponent implements OnInit {
 
   fetchResumeData(): void {
     this.resumeURL = 'assets/data/resume-data.json';
-    this.portfolioService.getHTTPForURL(this.resumeURL).subscribe((response: HttpResponse<PortfolioResumeModel>) => {
+    this.portfolioService.getHTTPResponseForURL(this.resumeURL).subscribe((response: HttpResponse<PortfolioResumeModel>) => {
       this.resumeData = { ...(response['body'] as PortfolioResumeModel) };
-      this.isDataLoaded = true;
+      setTimeout(() => { this.isDataLoaded = true }, 2500);
     });
   }
 

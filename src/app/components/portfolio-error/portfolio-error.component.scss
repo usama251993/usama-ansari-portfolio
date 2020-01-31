@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+$black: #212121;
+$blue-0: #2196f3;
+$blue-1: #0d47a1;
+
+div.container {
+  min-height: 100vh;
+  position: relative;
+
+  // For SVG v2
+  // height: 100vh;
+
+  // SVG v1 starts
+  // div.error-background {
+  //   position: absolute;
+  //   top: 0px;
+  //   left: 0px;
+  //   bottom: 0px;
+  //   right: 0px;
+  //   background: linear-gradient($black, $blue-1);
+  //   // background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/257418/andy-holmes-698828-unsplash.jpg);
+  // }
+
+  // div.error-foreground {
+  //   position: relative;
+  //   flex: 1;
+  //   z-index: 1;
+
+  //   div.error-foreground-top {
+  //     flex: 1;
+  //     div.error-message-holder {
+  //       padding: 16px;
+
+  //       div.error-message-heading-holder {
+  //         justify-content: center;
+  //         align-items: center;
+
+  //         div.error-message-heading {
+  //           flex-direction: column;
+  //           text-align: center;
+
+  //           div.text-abuse {
+  //             span {
+  //               font-size: 36px;
+  //             }
+  //           }
+  //           div.text-404 {
+  //             flex-direction: row;
+  //             align-items: center;
+
+  //             span {
+  //               font-size: 96px;
+  //               text-shadow: 0px 0px 12px #fafafa;
+  //             }
+  //           }
+
+  //           span {
+  //             color: #fafafa;
+
+  //             &.font-fira {
+  //               font-family: 'Fira Sans', 'Consolas', monospace;
+  //             }
+  //             &.font-consolas {
+  //               font-family: 'Consolas', monospace;
+  //             }
+  //           }
+  //         }
+  //       }
+
+  //       div.error-message-content-holder {
+  //         div.error-message-content {
+  //           font-family: 'Fira Sans', 'Consolas', monospace;
+  //           text-align: center;
+  //         }
+  //       }
+  //     }
+  //     div.error-icon-holder {
+  //       flex: 1;
+  //       div.error-icon {
+  //         flex: 1;
+  //         justify-content: flex-end;
+  //         align-items: center;
+  //       }
+  //       svg {
+  //         max-width: 640px;
+  //       }
+  //     }
+  //   }
+  //   div.error-foreground-bottom {
+  //     flex: 1;
+  //     position: relative;
+  //     background-color: #000000;
+  //     min-height: 80px;
+  //     max-height: 240px;
+  //   }
+  // }
+  // SVG v1 ends
+
+  // SVG v2 starts
+  div.error-background {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    svg {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+
+  div.error-foreground {
+    position: relative;
+    cursor: default;
+    user-select: none;
+    z-index: 1;
+
+    div.error-message-holder {
+      padding: 16px;
+
+      div.error-message-heading-holder {
+        justify-content: center;
+        align-items: center;
+
+        div.error-message-heading {
+          flex-direction: column;
+          text-align: center;
+
+          div.text-abuse {
+            span {
+              font-size: 36px;
+            }
+          }
+          div.text-404 {
+            flex-direction: row;
+            align-items: center;
+
+            span {
+              font-size: 96px;
+              text-shadow: 0px 0px 12px #fafafa;
+            }
+          }
+
+          span {
+            color: #fafafa;
+
+            &.font-fira {
+              font-family: 'Fira Sans', 'Consolas', monospace;
+            }
+            &.font-consolas {
+              font-family: 'Consolas', monospace;
+            }
+          }
+        }
+      }
+
+      div.error-message-content-holder {
+        div.error-message-content {
+          font-family: 'Fira Sans', 'Consolas', monospace;
+          text-align: center;
+        }
+      }
+    }
+  }
+  // SVG v2 ends
+}

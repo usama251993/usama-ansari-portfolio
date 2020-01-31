@@ -1,1 +1,129 @@
-<p>portfolio-error works!</p>
+<div class="container">
+  <!-- <div class="error-background"></div>
+  <div class="error-foreground">
+    <div class="error-foreground-top">
+      <div class="error-message-holder">
+        <div class="error-message-heading-holder">
+          <div class="error-message-heading">
+            <div class="text-abuse">
+              <span class="font-fira">F*ck!</span>
+            </div>
+            <div class="text-404">
+              <span class="font-fira">4</span>
+              <span class="font-consolas">0</span>
+              <span class="font-fira">4</span>
+            </div>
+          </div>
+        </div>
+        <div class="error-message-content-holder">
+          <div class="error-message-content">
+            <span>It seems the page you were looking for is no longer here.</span>
+            <span>I might probably be working on something that is terribly broken.</span>
+          </div>
+        </div>
+      </div>
+      <div class="error-icon-holder">
+        <div class="error-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" id="svg-404" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 360"
+               #svg404>
+            <defs>
+              <linearGradient id="lg-pole-light" x1="50%" y1="0%" x2="50%" y2="100%">
+                <stop offset="0%" stop-color="rgba(127, 127, 127, 1)">
+                  <animate attributeName="stop-color"
+                           values="rgba(0, 0, 0, 1); rgba(127, 127, 127, 1); rgba(0, 0, 0, 1)" dur="5000ms"
+                           repeatCount="indefinite">
+                  </animate>
+                </stop>
+                <stop offset="5%" stop-color="rgba(63, 63, 63, 1)">
+                  <animate attributeName="stop-color" values="rgba(0, 0, 0, 1); rgba(63, 63, 63, 1); rgba(0, 0, 0, 1)"
+                           dur="5000ms" repeatCount="indefinite">
+                  </animate>
+                </stop>
+                <stop offset="100%" stop-color="rgba(0,0,0,1)" stop-opacity="1"></stop>
+              </linearGradient>
+              <radialGradient id="rg-light-dispersion">
+                <stop offset="10%" stop-color="#fafafa" stop-opacity="1"></stop>
+                <stop offset="50%" stop-color="#EDEDED">
+                  <animate attributeName="stop-opacity" values="0.0; 0.4; 0.0" dur="5000ms" repeatCount="indefinite">
+                  </animate>
+                </stop>
+                <stop offset="90%" stop-color="#ededed" stop-opacity="0"></stop>
+              </radialGradient>
+              <rect id="r-lamp-base" x="0" y="0" width="20" height="80"></rect>
+              <rect id="r-lamp-post" x="0" y="0" width="10" height="150" fill="url(#lg-pole-light)"></rect>
+              <circle id="c-lamp-glass" cx="30" cy="30" r="30" fill="#fafafa"></circle>
+              <circle id="c-light-dispersion" cx="60" cy="60" r="60" fill="url(#rg-light-dispersion)"></circle>
+              <path id="p-glass-bulb-cover" d=""></path>
+            </defs>
+            <g id="g-lamp" #gLamp>
+              <use x="100" y="280" href="#r-lamp-base"></use>
+              <use x="105" y="130" href="#r-lamp-post"></use>
+              <use x="80" y="70" href="#c-lamp-glass"></use>
+              <use x="50" y="40" href="#c-light-dispersion"></use>
+            </g>
+            <g id="g-bench" #gBench></g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="error-foreground-bottom">
+
+    </div>
+  </div> -->
+  <div class="error-background">
+    <svg xmlns="http://www.w3.org/2000/svg" id="svg-404" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1920 1080"
+         #svg404>
+      <defs>
+        <linearGradient id="lg-backdrop-sky" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" stop-color="#000000"></stop>
+          <stop offset="100%" stop-color="#0d47a1"></stop>
+        </linearGradient>
+        <linearGradient id="lg-ufo-light" x1="50%" y1="0%" x2="50%" y2="100%">
+          <stop offset="0%" stop-color="#2196f3" stop-opacity="0.75"></stop>
+          <!-- <stop offset="40%" stop-color="#ffffff" stop-opacity="0.5"></stop> -->
+          <!-- <stop offset="100%" stop-color="#00000000" stop-opacity="0.2"></stop> -->
+          <stop offset="100%" stop-color="#ffffff" stop-opacity="0.2"></stop>
+        </linearGradient>
+        <filter id="f-light-blur">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="30"></feGaussianBlur>
+        </filter>
+      </defs>
+      <g id="g-sky">
+        <polygon points="0 0 0 1080 1920 1080 1920 0" fill="url(#lg-backdrop-sky)"></polygon>
+        <polygon points="920 0 640 864 1280 864 1000 0" fill="url(#lg-ufo-light)" filter="url(#f-light-blur)"></polygon>
+      </g>
+      <g id="g-lamp" #gLamp>
+        <polygon points="100 864 125 864 125 839 120 839 120 634 105 634 105 839 100 839 100 864"></polygon>
+        <polygon points="1780 864 1820 864 1820 784 1810 784 1810 634 1790 634 1790 784 1780 784 1780 864"></polygon>
+      </g>
+      <g id="g-pub" #gPub>
+        <polygon points="680 864 1240 864 1240 475 680 475"></polygon>
+      </g>
+      <g id="g-ground" #gGround>
+        <polygon points="0 864 1920 864 1920 1080 0 1080"></polygon>
+      </g>
+    </svg>
+  </div>
+  <div class="error-foreground">
+    <div class="error-message-holder">
+      <div class="error-message-heading-holder">
+        <div class="error-message-heading">
+          <div class="text-abuse">
+            <span class="font-fira">F*ck!</span>
+          </div>
+          <div class="text-404">
+            <span class="font-fira">4</span>
+            <span class="font-consolas">0</span>
+            <span class="font-fira">4</span>
+          </div>
+        </div>
+      </div>
+      <div class="error-message-content-holder">
+        <div class="error-message-content">
+          <span>It seems the page you were looking for is no longer here.</span>
+          <span>I might probably be working on something that is terribly broken.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,35 +1,26 @@
 <div class="portfolio-meter-holder">
   <div class="portfolio-skills-holder">
-    <div class="portfolio-skill"
-      *ngFor="let singleSkill of dummySkills; let index = index;"
-      (click)="setSkillRating(index)"
-      matRipple>
+    <div class="portfolio-skill" *ngFor="let singleSkill of skills; let index = index;" (click)="setSkillRating(index)"
+         matRipple>
       <span>{{ singleSkill.name }}</span>
     </div>
   </div>
 
   <div class="portfolio-scale-holder">
     <div class="scale-svg-holder">
-      <svg xmlns="http://www.w3.org/2000/svg"
-        id="svg-canvas"
-        preserveAspectRatio="xMidYMid meet"
-        viewBox="0 0 300 300"
-        #svgCanvas
-        [ngClass]="{'hidden': skillRating === null}">
+      <svg xmlns="http://www.w3.org/2000/svg" id="svg-canvas" preserveAspectRatio="xMidYMid meet" viewBox="0 0 300 300"
+           #svgCanvas [ngClass]="{'hidden': skillRating === null}">
         <defs>
-          <g id="mask-container"
-            #gMaskContainer>
+          <g id="mask-container" #gMaskContainer>
             <path #pSector></path>
             <circle #cMidHollow></circle>
           </g>
           <rect #rMasterMask></rect>
           <mask #mMeter></mask>
         </defs>
-        <g id="meter-circle"
-          #gIndicator>
+        <g id="meter-circle" #gIndicator>
         </g>
-        <g id="meter-pointer"
-          #gPointer>
+        <g id="meter-pointer" #gPointer>
         </g>
       </svg>
       <span [ngClass]="{'hidden': skillRating !== null}">Please select one skill to view the rating</span>

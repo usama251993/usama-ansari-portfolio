@@ -10,8 +10,10 @@ export interface PortfolioResumeModel {
       icon?: {
         prefix: string,
         name: string,
-        size?: string,
-        rotate?: string
+        transform?: {
+          size?: string,
+          rotate?: string
+        }
       },
       detail: {
         attributeTitle?: string,

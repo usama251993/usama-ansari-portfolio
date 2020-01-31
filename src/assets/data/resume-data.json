@@ -18,7 +18,9 @@
         "icon": {
           "prefix": "fas",
           "name": "envelope",
-          "size": "lg"
+          "transform": {
+            "size": "lg"
+          }
         },
         "detail": {
           "attributeTitle": "Mail",
@@ -30,8 +32,10 @@
         "icon": {
           "prefix": "fas",
           "name": "phone",
-          "size": "lg",
-          "rotate": "90"
+          "transform": {
+            "size": "lg",
+            "rotate": "90"
+          }
         },
         "detail": {
           "attributeTitle": "Phone",
@@ -42,7 +46,9 @@
         "icon": {
           "prefix": "fas",
           "name": "map-marker-alt",
-          "size": "lg"
+          "transform": {
+            "size": "lg"
+          }
         },
         "detail": {
           "attributeTitle": "Residence",
@@ -54,7 +60,9 @@
         "icon": {
           "prefix": "fas",
           "name": "globe-americas",
-          "size": "lg"
+          "transform": {
+            "size": "lg"
+          }
         },
         "detail": {
           "attributeTitle": "Website",
@@ -66,7 +74,9 @@
         "icon": {
           "prefix": "fab",
           "name": "linkedin",
-          "size": "lg"
+          "transform": {
+            "size": "lg"
+          }
         },
         "detail": {
           "attributeTitle": "LinkedIn",
@@ -78,7 +88,9 @@
         "icon": {
           "prefix": "fab",
           "name": "bitbucket",
-          "size": "lg"
+          "transform": {
+            "size": "lg"
+          }
         },
         "detail": {
           "attributeTitle": "Bitbucket",
@@ -90,7 +102,9 @@
         "icon": {
           "prefix": "fab",
           "name": "facebook",
-          "size": "lg"
+          "transform": {
+            "size": "lg"
+          }
         },
         "detail": {
           "attributeTitle": "Facebook",
@@ -102,7 +116,9 @@
         "icon": {
           "prefix": "fab",
           "name": "instagram",
-          "size": "lg"
+          "transform": {
+            "size": "lg"
+          }
         },
         "detail": {
           "attributeTitle": "Instagram",
@@ -137,25 +153,30 @@
             "The latter module helps user decide the best supplier for the materials quoted for outsourcing"
           ],
           "responsibilities": [
-            "Initiate and monitor the installation of client software on the server grade as well as the local machines",
-            "Setup of Oracle 12C Database, creation of one container and three pluggable databases and configuration of the same",
-            "Generate and test scripts to enforce automation of most repeated procedures during the installation and post installation of the software",
-            "Implementation of functional enhancements requested by client",
-            "Development of client-side web pages",
-            "Development, testing and handover of the final deliverables",
-            "Testing of the application and generation of appropriate reports",
-            "Creation and maintenance of documents concerned with project, training and practice"
+            "Developed Cost Analytics module with all the user forms designed in Angular",
+            "Generation of graphs and reports using the data provided by user",
+            "Handle stream of dynamic data required for generation of reports",
+            "Configuration of indications on the reports to alert user about cost excess",
+            "Testing of Web Application in different browsers and OS",
+            "Reporting, fixing and retesting of defects, if found",
+            "Updating the scripts as per the requirements",
+            "Creating documentation about the activities undertaken",
+            "Maintain the script to uninstall the schema while retaining the data",
+            "Handle the smooth transition of project over to the client",
+            "Source control management of code and documents"
           ],
           "skills": [
-            "Java 8",
-            "JSP",
-            "EJB",
-            "Servlet",
-            "Eclipse MARS",
+            "Angular 5",
+            "RxJS",
+            "Material Design",
+            "Microsoft Visual Studio Code",
             "Eclipse Oxygen",
-            "Apache Tomcat",
-            "VNC Viewer",
-            "PuTTY"
+            "Java 6",
+            "Apache TomCat",
+            "Windows (7 / 8 / 10 / Server 2008R2 / Server 2012 R2)",
+            "Linux Enterprise (SuSE and Redhat)",
+            "Tortoise SVN",
+            "WebEx for collaboration"
           ]
         }
       },
@@ -174,17 +195,21 @@
             "Additionally, TopHat Corporate Limited wanted to develop and deploy their official website on the Internet using WordPress"
           ],
           "responsibilities": [
-            "Analysis of existing formats of Excel Workbooks used by TopHat and suggest modifications which would aid accuracy of the data",
-            "Design of VBA Macros to perform automation of the Excel Workbooks to populate and update those fields which did not necessarily require inputs from the user",
-            "Handle the updating of interlinked data from operations tracker and inventory management workbooks to align it with the Project Plan Gantt Chart",
-            "Computation of Employee Payroll based on attendance",
-            "Deployment of TopHat Website on the internet using WordPress"
+            "Design and deployment of TopHat Website on the internet using WordPress",
+            "Customization of WordPress themes using theme design engine",
+            "Integration of social media plugins in the website",
+            "Designing of methodology to tackle inventory management and implementation of same in vanilla JavaScript",
+            "Development of automation scripts in VBA Macros to handle deadline tracking",
+            "Interaction with Project Plan file (*.mpp) in Excel to perform automation",
+            "Computation of Employee Payroll based on attendance"
           ],
           "skills": [
+            "WordPress",
+            "XAMPP",
+            "Microsoft Visual Studio Code",
             "Microsoft Excel 2016",
             "Microsoft Project Plan",
-            "Microsoft Visual Studio Code",
-            "WordPress"
+            "WebEx and Skype for Business for collaboration"
           ]
         }
       }
@@ -195,92 +220,107 @@
       {
         "type": "primitive",
         "name": "HTML5",
-        "rating": 9
+        "rating": 4.5
       },
       {
         "type": "primitive",
         "name": "CSS3",
-        "rating": 10
-      },
-      {
-        "type": "primitive",
-        "name": "JavaScript",
-        "rating": 8
-      },
-      {
-        "type": "primitive",
-        "name": "Python",
-        "rating": 6
-      },
-      {
-        "type": "primitive",
-        "name": "Java",
         "rating": 5
       },
       {
         "type": "primitive",
+        "name": "JavaScript",
+        "rating": 4.5
+      },
+      {
+        "type": "primitive",
+        "name": "Python",
+        "rating": 3.5
+      },
+      {
+        "type": "primitive",
+        "name": "Java",
+        "rating": 3
+      },
+      {
+        "type": "primitive",
         "name": "MySQL",
-        "rating": 6
+        "rating": 3
       },
       {
         "type": "framework",
         "name": "Angular 2+",
-        "rating": 8
+        "rating": 4
       },
       {
         "type": "framework",
         "name": "Bootstrap",
-        "rating": 9
+        "rating": 4.5
       },
       {
         "type": "framework",
         "name": "SASS",
-        "rating": 9
+        "rating": 4.5
       },
       {
         "type": "framework",
         "name": "jQuery",
-        "rating": 8
+        "rating": 4
       },
       {
         "type": "framework",
-        "name": "Pug",
-        "rating": 6
+        "name": "RxJS",
+        "rating": 3.5
       },
       {
-        "type": "tool",
-        "name": "Adobe Photoshop CC 2019",
-        "rating": 8
+        "type": "framework",
+        "name": "Django",
+        "rating": 3
+      },
+      {
+        "type": "os",
+        "name": "Microsoft Windows 7 / 8 / 10",
+        "rating": 4.5
+      },
+      {
+        "type": "os",
+        "name": "Linux SuSE / Redhat",
+        "rating": 3.5
       },
       {
         "type": "tool",
         "name": "Adobe Lightroom CC 2019",
-        "rating": 8
+        "rating": 4
       },
       {
         "type": "tool",
         "name": "Git SCM",
-        "rating": 9
+        "rating": 4.5
       },
       {
         "type": "tool",
         "name": "Google Cloud Platform",
-        "rating": 7
+        "rating": 3.5
+      },
+      {
+        "type": "tool",
+        "name": "Google Firebase",
+        "rating": 4.5
+      },
+      {
+        "type": "tool",
+        "name": "Eclipse IDE",
+        "rating": 4
       },
       {
         "type": "tool",
         "name": "Microsoft Visual Studio Code",
-        "rating": 8
+        "rating": 4
       },
       {
         "type": "tool",
         "name": "Microsoft Office 2016",
-        "rating": 8
-      },
-      {
-        "type": "tool",
-        "name": "Microsoft Windows 10",
-        "rating": 8
+        "rating": 4.5
       }
     ],
     "certifications": [

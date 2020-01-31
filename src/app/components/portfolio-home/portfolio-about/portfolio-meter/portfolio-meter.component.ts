@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2, Input } from '@angular/core';
+import { PortfolioResumeModel } from 'src/app/models/portfolio-resume.model';
 
 @Component({
   selector: 'app-portfolio-meter',
@@ -16,10 +17,11 @@ export class PortfolioMeterComponent implements OnInit {
   @ViewChild('gIndicator', { static: true }) gIndicator: ElementRef;
   @ViewChild('gPointer', { static: true }) gPointer: ElementRef;
 
-  elementObject: {} = {}
+  elementObject: {} = null;
 
   skillRating: number = null;
-  dummySkills: { name: string, rating: number }[] = [];
+  @Input('skillsBind') skills: PortfolioResumeModel['expertise']['skillset'][];
+  // dummySkills: { name: string, rating: number }[] = [];
 
   unitVector: SVGPoint = null;
   transformMatrix: SVGMatrix = null;
@@ -29,14 +31,14 @@ export class PortfolioMeterComponent implements OnInit {
   constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
-    this.dummySkills = [
-      { name: 'HTML5', rating: 5 },
-      { name: 'CSS3', rating: 5 },
-      { name: 'JS', rating: 4 },
-      { name: 'Java', rating: 1 },
-      { name: 'Python', rating: 3 },
-      { name: 'MySQL', rating: 2 }
-    ];
+    // this.dummySkills = [
+    //   { name: 'HTML5', rating: 5 },
+    //   { name: 'CSS3', rating: 5 },
+    //   { name: 'JS', rating: 4.5 },
+    //   { name: 'Java', rating: 2.5 },
+    //   { name: 'Python', rating: 3 },
+    //   { name: 'MySQL', rating: 2 }
+    // ];
 
     this.initSVGElements();
   }
@@ -122,10 +124,10 @@ export class PortfolioMeterComponent implements OnInit {
         }
       }
     }
-    this.draftSVG();
+    this.renderSVG();
   }
 
-  draftSVG(): void {
+  renderSVG(): void {
     // Setup the Rectangular Mask to be white
     this.renderer.setAttribute(this.elementObject['mask']['rMasterMask'], 'id', 'bg');
     this.renderer.setAttribute(this.elementObject['mask']['rMasterMask'], 'x', (0).toFixed(2));
@@ -225,7 +227,7 @@ export class PortfolioMeterComponent implements OnInit {
   }
 
   setSkillRating(skillIndex: number) {
-    this.skillRating = this.dummySkills[skillIndex].rating;
+    this.skillRating = this.skills[skillIndex]['rating'];
 
     this.dimensionObject['indicator']['needle']['rotation'] = (this.dimensionObject['meterScale'].sector.angle / 2) + ((360 - this.dimensionObject['meterScale'].sector.angle) * this.skillRating / this.dimensionObject['ratingCount']) - (((360 - this.dimensionObject['meterScale'].sector.angle) / this.dimensionObject['ratingCount']) / 2)
 
