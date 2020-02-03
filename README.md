@@ -24,10 +24,10 @@ The website is developed with an intent to
 ## Task Lists
   ---
 
-* [x] Initialize the repository and project
-* [x] Setup Routing, Angular Material and Fontawesome
-* [x] Fetch the resume data dynamically
-* [ ] Deploy on firebase
+- [x] Initialize the repository and project
+- [x] Setup Routing, Angular Material and Fontawesome
+- [x] Fetch the resume data dynamically
+- [ ] Deploy on firebase
 
 
 ### About Commits
@@ -41,3 +41,10 @@ The website is developed with an intent to
 | Removed theme color and optimized for the view | Modified Scrollbar for the entire application <br /> Arranged contents in `<mat-accordion>` <br /> Modified `portfolio-resume-model` |
 | Updated skill meter | Fully functional skill meter component generated |
 | Working on 404 Page | Traverse on the `/error` route to view the 404 Page <br /> Integrated the `portfolio-meter` component with `portfolio-about` component <br /> Intend to separate Work Experience, Skills, Certificates and Miscellaneous sections into single components and models <br /> Intend to integrate the modified model with `portfolio-resume-model` |
+| Separated Models | 404 Page still pending <br /> New folder added `app/shared` <br /> `app/shared` contains pipes in `app/shared/pipes` and models in `app/shared/models` <br /> `portfolio-resume-model` updated to contain fragmented models <br /> Date pipes have replaced function calls in `portfolio-about-component` |
+
+### Pending Work
+  ---
+* 404 Page SVG (can be found in `assets/media/images/404concept.png`)
+* Separation of `portfolio-about` component into subcomponents
+* Responsiveness of the `portfolio-about` component layout

@@ -25,6 +25,9 @@ import { PortfolioErrorComponent } from './components/portfolio-error/portfolio-
 
 import { PortfolioCoreService } from './services/portfolio-core.service';
 
+import { PortfolioDateMonthPipe } from './shared/pipes/portfolio-date.pipe';
+import { PortfolioNamePipe } from './shared/pipes/portfolio-name.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +40,9 @@ import { PortfolioCoreService } from './services/portfolio-core.service';
     PortfolioWorkExperienceComponent,
     PortfolioSkillsComponent,
     PortfolioCertificationsComponent,
-    PortfolioMiscellaneousComponent
+    PortfolioMiscellaneousComponent,
+    PortfolioDateMonthPipe,
+    PortfolioNamePipe
   ],
   imports: [
     BrowserModule,

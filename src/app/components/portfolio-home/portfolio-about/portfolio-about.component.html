@@ -64,7 +64,7 @@
         <div class="content-header">
           <div class="full-name-holder">
             <div class="full-name">
-              <span>{{ getFullName(resumeData.biodata.fullName) }}</span>
+              <span>{{ resumeData.biodata.fullName | portfolioName }}</span>
             </div>
           </div>
           <div class="designation-holder">
@@ -109,7 +109,7 @@
                               <span>from</span>
                             </div>
                             <div class="date-number">
-                              <span>{{ getMonthDate(singleProject.tenure.from) }}</span>
+                              <span>{{ singleProject.tenure.from | portfolioDateMonth }}</span>
                             </div>
                           </div>
                           <div class="date-holder tenure-holder">
@@ -128,7 +128,7 @@
                               <span>to</span>
                             </div>
                             <div class="date-number">
-                              <span>{{ getMonthDate(singleProject.tenure.to) }}</span>
+                              <span>{{ singleProject.tenure.to | portfolioDateMonth }}</span>
                             </div>
                           </div>
                         </div>

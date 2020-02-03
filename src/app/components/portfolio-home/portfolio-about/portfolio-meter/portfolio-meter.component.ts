@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer2, Input } from '@angular/core';
-import { PortfolioResumeModel } from 'src/app/models/portfolio-resume.model';
+import { PortfolioResumeModel } from 'src/app/shared/models/master/portfolio-resume.model';
 
 @Component({
   selector: 'app-portfolio-meter',
