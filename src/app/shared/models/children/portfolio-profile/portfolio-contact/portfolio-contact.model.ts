@@ -1,12 +1,7 @@
+import { PortfolioIconModel } from '../../portfolio-icon/portfolio-icon.model';
+
 export interface PortfolioContactModel {
-  icon?: {
-    prefix: string,
-    name: string,
-    transform?: {
-      size?: string,
-      rotate?: string
-    }
-  },
+  icon?: PortfolioIconModel,
   detail: {
     attributeTitle?: string,
     clickAction?: string,

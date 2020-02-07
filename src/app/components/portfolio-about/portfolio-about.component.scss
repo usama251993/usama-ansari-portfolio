@@ -12,7 +12,7 @@ div {
   flex-direction: column;
 }
 
-div.container {
+div.portfolio-about-container {
   flex-direction: row;
   min-height: 100vh;
 
@@ -106,10 +106,12 @@ div.container {
           mat-accordion {
             mat-expansion-panel {
               div.expansion-panel-content {
+
                 // flex-flow: row wrap;
                 // justify-content: space-around;
                 mat-card {
                   margin: 16px;
+
                   mat-card-content {
                     div.project-detail-holder {
                       flex-direction: row;
@@ -149,9 +151,11 @@ div.container {
                         div.project-description {
                           div.project-description-entity {
                             margin-bottom: 8px;
+
                             div.project-entity-heading {
                               font-size: 24px;
                             }
+
                             // div.project-entity-content {
                             //   div.project-description-holder {
                             //     div.project-description {
@@ -170,50 +174,5 @@ div.container {
         }
       }
     }
-  }
-  &.loading-data {
-    justify-content: center;
-    align-items: center;
-    div.loading-content-holder {
-      position: relative;
-      justify-content: center;
-      align-items: center;
-      div.loading-svg {
-        svg {
-          min-width: 240px;
-          g {
-            rect {
-              width: 5px;
-              height: 5px;
-              fill: #212121;
-            }
-            rect#tl {
-              animation: colorize 500ms linear infinite forwards;
-            }
-            rect#tr {
-              animation: colorize 500ms 125ms linear infinite forwards;
-            }
-            rect#br {
-              animation: colorize 500ms 250ms linear infinite forwards;
-            }
-            rect#bl {
-              animation: colorize 500ms 375ms linear infinite forwards;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@keyframes colorize {
-  0% {
-    fill: #212121;
-  }
-  50% {
-    fill: #fafafa;
-  }
-  100% {
-    fill: #212121;
   }
 }

@@ -45,49 +45,49 @@ export class PortfolioMeterComponent implements OnInit {
 
   initSVGElements() {
     this.elementObject = {
-      // <svg id="svg-canvas">
+      // <svg id='svg-canvas'>
       svgCanvas: this.svgCanvas.nativeElement,
 
       mask: {
-        // <g id="mask-container">
+        // <g id='mask-container'>
         gMaskContainer: this.gMaskContainer.nativeElement,
 
-        // <rect id="bg">
+        // <rect id='bg'>
         rMasterMask: this.rMasterMask.nativeElement,
 
-        // <mask id="indicator-mask">
+        // <mask id='indicator-mask'>
         mMeter: this.mMeter.nativeElement,
 
         element: {
-          // <path id="sector">
+          // <path id='sector'>
           pSector: this.pSector.nativeElement,
 
-          // <circle id="mid-hollow">
+          // <circle id='mid-hollow'>
           cMidHollow: this.cMidHollow.nativeElement,
 
-          // <line class="indicator-separator">
+          // <line class='indicator-separator'>
           lMeterSeparator: this.renderer.createElement('line', 'http://www.w3.org/2000/svg')
         }
       },
 
       base: {
 
-        // <g id="meter-circle">
+        // <g id='meter-circle'>
         gIndicator: this.gIndicator.nativeElement,
 
-        // <circle id="indicator">
+        // <circle id='indicator'>
         cIndicator: this.renderer.createElement('circle', 'http://www.w3.org/2000/svg')
       },
 
       overlay: {
 
-        // <g id="meter-pointer">
+        // <g id='meter-pointer'>
         gPointer: this.gPointer.nativeElement,
 
-        // <circle id="pinion">
+        // <circle id='pinion'>
         cPinion: this.renderer.createElement('circle', 'http://www.w3.org/2000/svg'),
 
-        // <line id="needle">
+        // <line id='needle'>
         lNeedle: this.renderer.createElement('line', 'http://www.w3.org/2000/svg')
       }
 

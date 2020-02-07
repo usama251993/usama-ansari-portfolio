@@ -11,5 +11,5 @@ export interface PortfolioWorkExperienceModel {
       responsibilities?: string[],
       skills?: string[]
     }
-  }
+  }[]
 }

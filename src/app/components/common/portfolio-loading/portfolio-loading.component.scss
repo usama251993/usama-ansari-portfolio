@@ -1,0 +1,60 @@
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+div.loading-data {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  div.loading-content-holder {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    div.loading-svg {
+      svg {
+        min-width: 240px;
+
+        g {
+          rect {
+            width: 5px;
+            height: 5px;
+            fill: #212121;
+          }
+
+          rect#tl {
+            animation: colorize 500ms linear infinite forwards;
+          }
+
+          rect#tr {
+            animation: colorize 500ms 125ms linear infinite forwards;
+          }
+
+          rect#br {
+            animation: colorize 500ms 250ms linear infinite forwards;
+          }
+
+          rect#bl {
+            animation: colorize 500ms 375ms linear infinite forwards;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes colorize {
+  0% {
+    fill: #212121;
+  }
+
+  50% {
+    fill: #fafafa;
+  }
+
+  100% {
+    fill: #212121;
+  }
+}

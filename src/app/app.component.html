@@ -1,3 +1,33 @@
-<div class="app-container mat-app-background">
-  <router-outlet></router-outlet>
+<div class="portfolio-app-container">
+  <!-- <mat-toolbar>
+    <button mat-icon-button (click)="snav.toggle()">
+      <fa-icon [icon]="['fas', 'ellipsis-v']"></fa-icon>
+    </button>
+    <h1 class="example-app-name">Responsive App</h1>
+  </mat-toolbar>
+  <mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav #snav mode="over" fixedInViewport="true">
+      <mat-nav-list>
+        <div class="nav-button">
+          <span>HOME</span>
+        </div>
+        <div class="nav-button">
+          <span>ABOUT</span>
+        </div>
+        <div class="nav-button">
+          <span>CONNECT</span>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container> -->
+  <div class="portfolio-navbar-holder">
+    <app-portfolio-navbar></app-portfolio-navbar>
+  </div>
+  <div class="portfolio-component-holder">
+    <router-outlet></router-outlet>
+  </div>
 </div>
