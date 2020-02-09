@@ -56,8 +56,8 @@
           <div class="project-grid-cell"
                *ngFor="let singleProject of resumeData.workExperience.projects; let index = index;"
                id="project-{{index + 1}}">
-            <mat-card class="mat-elevation-z4">
-              <!-- <mat-card-header>
+            <!-- <mat-card class="mat-elevation-z4">
+              <mat-card-header>
                 <mat-card-title>
                   <span>{{ singleProject.description.title }}</span>
                 </mat-card-title>
@@ -71,14 +71,12 @@
                 </button>
               </mat-card-actions>
             </mat-card> -->
-              <span>{{ singleProject.description.title }}</span>
-              <span>{{ singleProject.description.overviews[0] }}</span>
-              <button mat-raised-button>
-                <span>{{ componentStrings.button.viewProject }}</span>
-              </button>
+            <span>{{ singleProject.description.title }}</span>
+            <span>{{ singleProject.description.overviews[0] }}</span>
+            <button mat-raised-button>
+              <span>{{ componentStrings.button.viewProject }}</span>
+            </button>
           </div>
-          <div class="project-grid-cell" id="project-two"></div>
-          <div class="project-grid-cell" id="project-three"></div>
         </div>
       </div>
     </div>

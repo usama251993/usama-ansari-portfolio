@@ -48,9 +48,9 @@ export class PortfolioAboutComponent implements OnInit {
         this.resumeData = {
           ...(response['body'] as PortfolioResumeModel)
         };
-        setTimeout(() => {
-          this.bIsDataLoaded = true;
-        }, 1000);
+        // setTimeout(() => {
+        this.bIsDataLoaded = true;
+        // }, 1000);
       });
 
     // console.log(this.resumeData);
