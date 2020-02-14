@@ -30,6 +30,10 @@ export class PortfolioNavbarComponent implements OnInit {
     this.initNavbarContents();
   }
 
+  // To handle responsiveness of navbar
+  // viewport width <  600px collapse
+  // viewport width >= 600px expand
+
   initResponsiveNavbar(): void {
     this.navbarState = {
       bIsActive: false,
@@ -42,9 +46,16 @@ export class PortfolioNavbarComponent implements OnInit {
     });
   }
 
+  // To handle open / close of navbar
   toggleNavbar(): void {
     this.navbarState.bIsActive = !this.navbarState.bIsActive;
   }
+
+  // To initiate navbar object
+  // contains the following data
+  // 1. navbar buttons
+  // 2. navbar icons
+  // 3. route
 
   initNavbarContents(): void {
     this.navbarContents = [
@@ -70,27 +81,27 @@ export class PortfolioNavbarComponent implements OnInit {
           }
         },
         detail: {
-          content: 'about',
+          content: 'resume',
           clickAction: 'about'
         }
       },
       {
         icon: {
           prefix: 'fas',
-          name: 'phone',
+          name: 'icons',
           transform: {
             size: 'lg',
-            rotate: '90'
           }
         },
         detail: {
-          content: 'connect',
-          clickAction: 'contact'
+          content: 'interests',
+          clickAction: 'interests'
         }
       }
-    ]
+    ];
   }
 
+  // To handle page navigation
   navigateTo(navbarContent: PortfolioContactModel): void {
     this.navbarState.bIsActive = false;
     this.router.navigate(['/', navbarContent.detail.clickAction], { relativeTo: this.route });

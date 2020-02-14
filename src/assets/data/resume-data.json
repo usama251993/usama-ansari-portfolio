@@ -13,7 +13,8 @@
         "Keenly interested in design and development of client side webpages"
       ]
     },
-    "contacts": [{
+    "contacts": [
+      {
         "icon": {
           "prefix": "fas",
           "name": "envelope",
@@ -136,7 +137,8 @@
     "designation": "Senior Software Engineer"
   },
   "workExperience": {
-    "projects": [{
+    "projects": [
+      {
         "tenure": {
           "from": "2015-06-30T18:30:00.000Z",
           "to": "2019-09-30T18:30:00.000Z"
@@ -256,118 +258,132 @@
     ]
   },
   "expertise": {
-    "skillset": [{
-        "type": "primitive",
-        "name": "HTML5",
-        "rating": 4.5
+    "skillset": [
+      {
+        "name": "primitive",
+        "skills": [
+          {
+            "name": "HTML5",
+            "rating": 4.5
+          },
+          {
+            "name": "CSS3",
+            "rating": 5
+          },
+          {
+            "name": "JavaScript",
+            "rating": 4.5
+          },
+          {
+            "name": "Python",
+            "rating": 3.5
+          },
+          {
+            "name": "Java",
+            "rating": 3
+          },
+          {
+            "name": "MySQL",
+            "rating": 3
+          }
+        ]
       },
       {
-        "type": "primitive",
-        "name": "CSS3",
-        "rating": 5
+        "name": "framework",
+        "skills": [
+          {
+            "name": "Angular 2+",
+            "rating": 4
+          },
+          {
+            "name": "Bootstrap",
+            "rating": 4.5
+          },
+          {
+            "name": "SASS",
+            "rating": 4.5
+          },
+          {
+            "name": "jQuery",
+            "rating": 4
+          },
+          {
+            "name": "RxJS",
+            "rating": 3.5
+          },
+          {
+            "name": "Django",
+            "rating": 3
+          }
+        ]
       },
       {
-        "type": "primitive",
-        "name": "JavaScript",
-        "rating": 4.5
+        "name": "os",
+        "skills": [
+          {
+            "name": "Microsoft Windows 7",
+            "rating": 4.5
+          },
+          {
+            "name": "Microsoft Windows 8",
+            "rating": 4.5
+          },
+          {
+            "name": "Microsoft Windows 10",
+            "rating": 5
+          },
+          {
+            "name": "Linux SuSE",
+            "rating": 3.5
+          },
+          {
+            "name": "Redhat",
+            "rating": 3.5
+          }
+        ]
       },
       {
-        "type": "primitive",
-        "name": "Python",
-        "rating": 3.5
-      },
-      {
-        "type": "primitive",
-        "name": "Java",
-        "rating": 3
-      },
-      {
-        "type": "primitive",
-        "name": "MySQL",
-        "rating": 3
-      },
-      {
-        "type": "framework",
-        "name": "Angular 2+",
-        "rating": 4
-      },
-      {
-        "type": "framework",
-        "name": "Bootstrap",
-        "rating": 4.5
-      },
-      {
-        "type": "framework",
-        "name": "SASS",
-        "rating": 4.5
-      },
-      {
-        "type": "framework",
-        "name": "jQuery",
-        "rating": 4
-      },
-      {
-        "type": "framework",
-        "name": "RxJS",
-        "rating": 3.5
-      },
-      {
-        "type": "framework",
-        "name": "Django",
-        "rating": 3
-      },
-      {
-        "type": "os",
-        "name": "Microsoft Windows 7 / 8 / 10",
-        "rating": 4.5
-      },
-      {
-        "type": "os",
-        "name": "Linux SuSE / Redhat",
-        "rating": 3.5
-      },
-      {
-        "type": "tool",
-        "name": "Adobe Lightroom CC 2019",
-        "rating": 4
-      },
-      {
-        "type": "tool",
-        "name": "Git SCM",
-        "rating": 4.5
-      },
-      {
-        "type": "tool",
-        "name": "Google Cloud Platform",
-        "rating": 3.5
-      },
-      {
-        "type": "tool",
-        "name": "Google Firebase",
-        "rating": 4.5
-      },
-      {
-        "type": "tool",
-        "name": "Eclipse IDE",
-        "rating": 4
-      },
-      {
-        "type": "tool",
-        "name": "Microsoft Visual Studio Code",
-        "rating": 4
-      },
-      {
-        "type": "tool",
-        "name": "Microsoft Office 2016",
-        "rating": 4.5
+        "name": "tool",
+        "skills": [
+          {
+            "name": "Adobe Lightroom CC 2019",
+            "rating": 4
+          },
+          {
+            "name": "Git SCM",
+            "rating": 4.5
+          },
+          {
+            "name": "Google Cloud Platform",
+            "rating": 3.5
+          },
+          {
+            "name": "Google Firebase",
+            "rating": 4.5
+          },
+          {
+            "name": "Eclipse IDE",
+            "rating": 4
+          },
+          {
+            "name": "Microsoft Visual Studio Code",
+            "rating": 4
+          },
+          {
+            "name": "Microsoft Office 2016",
+            "rating": 4.5
+          }
+        ]
       }
     ],
-    "certifications": [{
-      "name": "",
-      "level": 0,
-      "certificationDate": "",
-      "expiryDate": 0,
-      "score": 0
-    }]
+    "certifications": [
+      {
+        "name": "",
+        "level": 0,
+        "certificationDate": "",
+        "expiryDate": 0,
+        "score": 0
+      }
+    ]
   }
 }

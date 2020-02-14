@@ -1,0 +1,28 @@
+<div class="homepage-entity-holder" #contact>
+  <div class="left-wrapper">
+    <div class="view-name-holder">
+      <div class="view-name">
+        <span>{{ oComponentAssets.assets.text.viewName }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="right-wrapper">
+    <div class="top-wrapper">
+      <div class="working">Working on this view</div>
+    </div>
+    <div class="bottom-wrapper" *ngIf="!oComponentAssets.assets.flag.isLastView">
+      <div class="scroll-text-holder" (click)="scrollToNextView(contact)">
+        <div class="scroll-text">
+          <span>{{ oComponentAssets.common.text.scrollForMore | lowercase }}</span>
+        </div>
+        <div class="scroll-arrow">
+          <span>
+            <fa-icon
+                     [icon]="[oComponentAssets.common.icon.downArrow.prefix, oComponentAssets.common.icon.downArrow.name]">
+            </fa-icon>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

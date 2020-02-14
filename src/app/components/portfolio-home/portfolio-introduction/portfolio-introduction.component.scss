@@ -1,0 +1,58 @@
+@import '../portfolio-home.component.scss';
+
+div.right-wrapper {
+  div.top-wrapper {
+    padding: 0px;
+  }
+}
+
+div.biodata-holder {
+  div.greeting-holder {
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    cursor: default;
+  }
+
+  div.name-holder {
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    cursor: default;
+
+    div.name {
+      font-family: 'Fira Sans', 'Calibri', sans-serif;
+      font-size: 72px;
+      text-shadow: 0px 0px 8px #fafafa;
+
+      span {
+        text-align: center;
+      }
+    }
+  }
+
+  div.description-holder {
+    margin: 16px;
+    cursor: default;
+
+    div.description-question {
+      margin: 8px;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        text-align: center;
+      }
+    }
+
+    div.description-short {
+      margin: 8px;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        text-align: center;
+      }
+    }
+  }
+}

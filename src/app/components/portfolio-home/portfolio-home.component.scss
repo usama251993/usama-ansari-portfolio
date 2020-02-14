@@ -4,158 +4,7 @@ div {
 }
 
 div.portfolio-home-container {
-
-  div.left-wrapper {
-    max-width: 72px;
-    justify-content: center;
-    align-items: center;
-
-    div.view-name-holder {
-      transform: rotate(-90deg);
-      font-size: 36px;
-      margin: 16px;
-
-      div.view-name {
-        font-family: 'Fira Sans', 'Calibri', sans-serif;
-        color: #fafafa80;
-        text-shadow: 0px 0px 4px #fafafa;
-      }
-    }
-  }
-
-  div.portfolio-home-biodata-holder {
-    flex-direction: row;
-    min-height: 100vh;
-
-    div.right-wrapper {
-      flex: 1;
-
-      div.top-wrapper {
-        justify-content: center;
-        flex: 1;
-
-        div.greeting-holder {
-          justify-content: center;
-          align-items: center;
-          margin: 16px;
-          cursor: default;
-        }
-
-        div.name-holder {
-          justify-content: center;
-          align-items: center;
-          margin: 16px;
-          cursor: default;
-
-          div.name {
-            font-family: 'Fira Sans', 'Calibri', sans-serif;
-            font-size: 72px;
-            text-shadow: 0px 0px 8px #fafafa;
-
-            span {
-              text-align: center;
-            }
-          }
-        }
-
-        div.description-holder {
-          margin: 16px;
-          cursor: default;
-
-          div.description-question {
-            margin: 8px;
-            justify-content: center;
-            align-items: center;
-
-            span {
-              text-align: center;
-            }
-          }
-
-          div.description-short {
-            margin: 8px;
-            justify-content: center;
-            align-items: center;
-
-            span {
-              text-align: center;
-            }
-          }
-        }
-      }
-    }
-
-    div.bottom-wrapper {
-      justify-content: center;
-      align-items: center;
-
-      div.scroll-text-holder {
-        margin: 16px;
-        cursor: pointer;
-        justify-content: center;
-        align-items: center;
-
-        div.scroll-text {
-          margin: 8px;
-          justify-content: center;
-          align-items: center;
-
-          span {
-            text-align: center;
-          }
-        }
-
-        div.scroll-arrow {
-          animation: bounce 1500ms linear infinite alternate;
-        }
-      }
-    }
-  }
-
-
-
-  div.portfolio-home-projects-holder {
-    flex-direction: row;
-    min-height: 100vh;
-
-
-    div.right-wrapper {
-      flex: 1;
-
-      div.portfolio-project-grid-holder {
-        flex: 1;
-        padding: 16px;
-        justify-content: center;
-        align-items: center;
-
-        div.project-grid {
-          // // justify-content: space-between;
-          // display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-gap: 16px;
-
-          div.project-grid-cell {
-            display: grid;
-
-            &#project-1 {
-              grid-area: 1 / 1 / span 2 / 2;
-            }
-
-            &#project-2 {
-              grid-area: 1 / 2 / 2 / 2;
-            }
-
-            &#project-3 {
-              grid-area: 2 / 2 / 2 / 3;
-            }
-          }
-
-
-        }
-      }
-    }
-
-  }
+  min-height: 100vh;
 
   div.top-fab-holder {
     padding: 16px;
@@ -175,7 +24,67 @@ div.portfolio-home-container {
       background-color: #4285f480;
     }
   }
+}
 
+div.left-wrapper {
+  max-width: 72px;
+  justify-content: center;
+  align-items: center;
+
+  div.view-name-holder {
+    transform: rotate(-90deg);
+    font-size: 36px;
+    margin: 16px;
+
+    div.view-name {
+      font-family: 'Fira Sans', 'Calibri', sans-serif;
+      color: #fafafa80;
+      text-shadow: 0px 0px 4px #fafafa;
+    }
+  }
+}
+
+div.right-wrapper {
+  flex: 1;
+
+  div.top-wrapper {
+    justify-content: center;
+    flex: 1;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div.bottom-wrapper {
+    justify-content: center;
+    align-items: center;
+
+    div.scroll-text-holder {
+      margin: 16px;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+
+      div.scroll-text {
+        margin: 8px;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          text-align: center;
+        }
+      }
+
+      div.scroll-arrow {
+        animation: bounce 1500ms linear infinite alternate;
+      }
+    }
+  }
+}
+
+div.homepage-entity-holder {
+  flex-direction: row;
+  min-height: 100vh;
 }
 
 @keyframes bounce {

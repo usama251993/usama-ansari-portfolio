@@ -30,11 +30,13 @@ div.portfolio-navbar-container {
         transition: 250ms;
 
         div.navbar-menu-text {
-          transition: 500ms;
-          transition-delay: 250ms;
+          transition: 250ms;
+          transition-delay: 100ms;
           opacity: 0;
-          transform: translateX(100%);
+          transform: translateX(50%);
           padding: 16px;
+          flex: 1;
+          text-align: right;
         }
 
         div.navbar-menu-icon {
@@ -44,14 +46,14 @@ div.portfolio-navbar-container {
 
         &.active {
           font-weight: 700;
-          color: #4285f4;
+          // color: #4285f4;
         }
 
         &:hover {
           color: #4285f4;
 
           div.navbar-menu-text {
-            transform: translateX(0%);
+            transform: translateX(20%);
             opacity: 1;
           }
         }
@@ -92,6 +94,7 @@ div.portfolio-navbar-container {
             div.navbar-menu-text {
               transition: none;
               opacity: 1;
+              text-align: left;
               transform: translateX(0%);
             }
           }

@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { catchError, retry, concatMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -24,12 +24,12 @@ export class PortfolioCoreService {
     return throwError('Unknown Error!');
   }
 
-  getHTTPResponseForURL(configURL: string): Observable<any> {
-    return this.http.get<any>(configURL, { observe: 'response' })
+  getHTTPResponseForURL(dataURL: string): Observable<any> {
+    return this.http.get<any>(dataURL, { observe: 'response' })
       .pipe(
+        // concatMap(() => this.http.get<any>(assetURL, { observe: 'response' })),
         retry(3),
         catchError(this.handleError)
       );
   }
-
 }
