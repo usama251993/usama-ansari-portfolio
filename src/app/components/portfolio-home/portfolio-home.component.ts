@@ -1,74 +1,101 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnDestroy,
+  AfterViewInit,
+  ComponentFactoryResolver,
+  ComponentRef,
+  HostListener,
+  ViewChild,
+  ViewContainerRef,
+} from '@angular/core';
 import { HttpResponse } from '@angular/common/http';
 
+import { forkJoin } from 'rxjs';
+
+import { PortfolioContactComponent } from './portfolio-contact/portfolio-contact.component';
+import { PortfolioIntroductionComponent } from './portfolio-introduction/portfolio-introduction.component';
+import { PortfolioProjectsComponent } from './portfolio-projects/portfolio-projects.component';
+import { PortfolioSkillsComponent } from './portfolio-skills/portfolio-skills.component';
+
+import { PortfolioHomeTemplateComponent } from '../common/portfolio-home-template/portfolio-home-template.component';
 import { PortfolioCoreService } from 'src/app/services/portfolio-core.service';
-import { PortfolioResumeModel } from 'src/app/shared/models/master/portfolio-resume.model';
-import { PortfolioStringsService } from 'src/app/services/portfolio-strings.service';
+import { PortfolioAssetsService } from 'src/app/services/portfolio-assets.service';
 
 @Component({
   selector: 'app-portfolio-home',
   templateUrl: './portfolio-home.component.html',
   styleUrls: ['./portfolio-home.component.scss']
 })
-export class PortfolioHomeComponent implements OnInit {
-  resumeData: PortfolioResumeModel = null;
-  bIsDataLoaded: boolean = false;
-  resumeURL: string = '';
-  componentStrings: {} = {};
-  bDisplayTopFab: boolean = false;
+export class PortfolioHomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  componentIcons: {} = {};
+  bDisplayTopFab: boolean = false;
+  crComponentRef: ComponentRef<any> = null;
+  sResumeURL: string = '';
+  sAssetsURL: string = '';
+  oHomepageAssets: {} = null;
+
+  @ViewChild('dynamicData', { read: ViewContainerRef, static: true }) public vcContainerRef: ViewContainerRef;
+  readonly templateMapper: {} = {
+    contact: PortfolioContactComponent,
+    introduction: PortfolioIntroductionComponent,
+    projects: PortfolioProjectsComponent,
+    skills: PortfolioSkillsComponent
+  };
 
   constructor(
     private portfolioService: PortfolioCoreService,
-    private stringService: PortfolioStringsService
+    private assetsService: PortfolioAssetsService,
+    private resolver: ComponentFactoryResolver
   ) { }
 
-  ngOnInit() {
-    this.initComponentIcons();
-    this.fetchResumeData();
-  }
-
   @HostListener("window:scroll", [])
-  onWindowScroll() {
+  onWindowScroll(): void {
     window.pageYOffset ? this.bDisplayTopFab = true : this.bDisplayTopFab = false;
+
   }
 
-  initComponentIcons(): void {
-    this.componentIcons['upArrow'] = {
-      prefix: 'fas',
-      name: 'chevron-up',
-    };
-    this.componentIcons['downArrow'] = {
-      prefix: 'fas',
-      name: 'chevron-down',
-    }
+  ngOnInit(): void {
+    this.sAssetsURL = 'assets/data/component-assets.json';
+    this.sResumeURL = 'assets/data/resume-data.json';
+    this.oHomepageAssets = {};
   }
 
-  fetchResumeData(): void {
-    this.resumeURL = 'assets/data/resume-data.json';
-    this.portfolioService
-      .getHTTPResponseForURL(this.resumeURL)
-      .subscribe((response: HttpResponse<PortfolioResumeModel>) => {
-        this.resumeData = {
-          ...(response['body'] as PortfolioResumeModel)
-        };
-        this.initAppStrings(this.resumeData);
-        this.bIsDataLoaded = true;
+  ngAfterViewInit(): void {
+    this.initAppAssets();
+  }
+
+  initAppAssets(): void {
+    forkJoin([
+      this.portfolioService.getHTTPResponseForURL(this.sResumeURL),
+      this.portfolioService.getHTTPResponseForURL(this.sAssetsURL)
+    ]).subscribe((responseArray: HttpResponse<any>[]) => {
+      this.vcContainerRef.clear();
+      this.oHomepageAssets['home'] = {};
+      this.oHomepageAssets['home'] = { ...responseArray[1].body['home'] };
+      this.oHomepageAssets['common'] = {};
+      this.oHomepageAssets['common'] = { ...responseArray[1].body['common'] };
+
+      responseArray[1].body['views']['homeComponent'].forEach((singleView: { name: string }) => {
+        const componentFactory = this.resolver.resolveComponentFactory(this.templateMapper[singleView.name]);
+        this.crComponentRef = this.vcContainerRef.createComponent(componentFactory);
+        (this.crComponentRef.instance as PortfolioHomeTemplateComponent).oComponentAssets = {};
+        (this.crComponentRef.instance as PortfolioHomeTemplateComponent).oComponentAssets['assets'] = { ...responseArray[1].body[singleView.name] };
+        (this.crComponentRef.instance as PortfolioHomeTemplateComponent).oComponentAssets['common'] = { ...responseArray[1].body['common'] };
+        (this.crComponentRef.instance as PortfolioHomeTemplateComponent).oComponentAssets['views'] = {};
+        (this.crComponentRef.instance as PortfolioHomeTemplateComponent).oComponentAssets['views'] = responseArray[1].body['views']['homeComponent'];
+        (this.crComponentRef.instance as PortfolioHomeTemplateComponent).mResumeData = responseArray[0].body;
       });
+    });
   }
 
-  initAppStrings(resumeData: PortfolioResumeModel): void {
-    this.componentStrings = this.stringService['appStrings']['homeComponent'];
-    this.componentStrings['fullName'] = resumeData['biodata']['fullName'];
+  ngOnDestroy(): void {
+    this.assetsService.childViews = [];
+    this.crComponentRef.destroy();
   }
 
-  scrollToNextView(nextView: HTMLDivElement): void {
-    nextView.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  scrollToTop(firstView: HTMLDivElement): void {
-    firstView.scrollIntoView({ behavior: 'smooth' });
+  scrollToTop(): void {
+    this.assetsService.childViews[0].scrollIntoView({ behavior: 'smooth' });
   }
 
 }

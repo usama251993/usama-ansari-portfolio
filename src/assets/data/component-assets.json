@@ -1,0 +1,97 @@
+{
+  "views": {
+    "homeComponent": [
+      {
+        "name": "introduction"
+      },
+      {
+        "name": "projects"
+      },
+      {
+        "name": "skills"
+      },
+      {
+        "name": "contact"
+      }
+    ],
+    "uncategorized": [
+      {
+        "name": "about"
+      },
+      {
+        "name": "interests"
+      }
+    ]
+  },
+  "common": {
+    "icon": {
+      "upArrow": {
+        "prefix": "fas",
+        "name": "chevron-up"
+      },
+      "downArrow": {
+        "prefix": "fas",
+        "name": "chevron-down"
+      }
+    },
+    "text": {
+      "scrollForMore": "Scroll for more"
+    }
+  },
+  "home": {},
+  "introduction": {
+    "text": {
+      "description": {
+        "question": "What do I do?",
+        "shortLines": [
+          "I design pages, which users would like to play with",
+          "Big fan of Angular and Material Design"
+        ]
+      },
+      "fullName": {},
+      "greetingText": "Hi, I am",
+      "viewName": "introduction"
+    },
+    "flag": {
+      "isLastView": "false"
+    }
+  },
+  "projects": {
+    "text": {
+      "viewName": "projects"
+    },
+    "element": {
+      "button": "View Project"
+    },
+    "flag": {
+      "isLastView": "false"
+    }
+  },
+  "skills": {
+    "text": {
+      "selectSkill": "Please select one skill to view the rating",
+      "viewName": "skills"
+    },
+    "flag": {
+      "isLastView": "false"
+    }
+  },
+  "contact": {
+    "text": {
+      "formFields": {
+        "inputName": "",
+        "inputEmail": "",
+        "userComments": ""
+      },
+      "viewName": "contact"
+    },
+    "element": {
+      "formButtons": {
+        "submitForm": "Submit Form"
+      }
+    },
+    "flag": {
+      "isLastView": "false"
+    }
+  }
+}

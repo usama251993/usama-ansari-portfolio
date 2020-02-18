@@ -176,3 +176,14 @@ div.portfolio-about-container {
     }
   }
 }
+
+div#not-enough-width {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    padding: 16px;
+    text-align: center;
+  }
+}

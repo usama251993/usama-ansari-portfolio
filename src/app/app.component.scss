@@ -6,19 +6,25 @@ div {
 div.portfolio-app-container {
   min-height: 100vh;
 
-  // background: url('../assets/media/images/design.png');
-  // background-size: cover;
-  // background-attachment: fixed;
-
   // Navbar Inspiration : https://prollective.com/
   div.portfolio-navbar-holder {
     position: fixed;
     top: 0px;
-    right: 0px;
+    right: 4px;
     z-index: 2;
   }
 
   div.portfolio-component-holder {
     flex: 1;
   }
+
+  div.portfolio-scollbar-holder {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 4px;
+    transition: 500ms;
+  }
+
 }

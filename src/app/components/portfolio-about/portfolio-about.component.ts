@@ -7,7 +7,7 @@ import {
 
 import { PortfolioResumeModel } from 'src/app/shared/models/master/portfolio-resume.model';
 import { PortfolioCoreService } from 'src/app/services/portfolio-core.service';
-import { PortfolioDataService } from 'src/app/services/portfolio-data.service';
+import { BreakpointObserver, BreakpointState, Breakpoints } from '@angular/cdk/layout';
 
 export const tooltipDefaults: MatTooltipDefaultOptions = {
   showDelay: 250,
@@ -30,13 +30,18 @@ export class PortfolioAboutComponent implements OnInit {
   resumeData: PortfolioResumeModel = null;
   bIsDataLoaded: boolean = false;
   resumeURL: string = '';
+  bIsEnoughViewport: boolean = false;
 
   constructor(
     private portfolioService: PortfolioCoreService,
-    // private portfolioData: PortfolioDataService
+    private breakpoint: BreakpointObserver
   ) { }
 
   ngOnInit() {
+    this.breakpoint.observe(['(max-width: 860px)']).subscribe((state: BreakpointState) => {
+      this.bIsEnoughViewport = !state.matches;
+    });
+
     this.fetchResumeData();
   }
 

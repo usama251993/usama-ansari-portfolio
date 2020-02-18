@@ -19,26 +19,30 @@ body {
   font-family: 'Segoe UI', 'Calibri', sans-serif;
 }
 
-/* width */
 ::-webkit-scrollbar {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 4px;
-  height: 4px;
+  display: none;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  opacity: 1;
-}
+// /* width */
+// ::-webkit-scrollbar {
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   width: 4px;
+//   height: 4px;
+// }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: gray;
-  border-radius: 0px;
-}
+// /* Track */
+// ::-webkit-scrollbar-track {
+//   opacity: 1;
+// }
+
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   background: gray;
+//   border-radius: 0px;
+// }
 
 /* Handle on hover */
 // ::-webkit-scrollbar-thumb:hover {

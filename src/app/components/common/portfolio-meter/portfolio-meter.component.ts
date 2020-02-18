@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer2, Input } from '@angular/core';
 import { PortfolioResumeModel } from 'src/app/shared/models/master/portfolio-resume.model';
+import { MatSelectChange } from '@angular/material';
 
 @Component({
   selector: 'app-portfolio-meter',
@@ -8,6 +9,7 @@ import { PortfolioResumeModel } from 'src/app/shared/models/master/portfolio-res
 })
 export class PortfolioMeterComponent implements OnInit {
 
+  // DOM Elements
   @ViewChild('svgCanvas', { static: true }) svgCanvas: ElementRef;
   @ViewChild('gMaskContainer', { static: true }) gMaskContainer: ElementRef;
   @ViewChild('rMasterMask', { static: true }) rMasterMask: ElementRef;
@@ -17,32 +19,36 @@ export class PortfolioMeterComponent implements OnInit {
   @ViewChild('gIndicator', { static: true }) gIndicator: ElementRef;
   @ViewChild('gPointer', { static: true }) gPointer: ElementRef;
 
+  // SVG DOM elements data
   elementObject: {} = null;
 
-  skillRating: number = null;
-  @Input('skillsBind') skills: PortfolioResumeModel['expertise']['skillset'][];
-  // dummySkills: { name: string, rating: number }[] = [];
-
-  unitVector: SVGPoint = null;
-  transformMatrix: SVGMatrix = null;
-
+  // SVG dimensions
   dimensionObject: {} = {};
+
+  // Skill
+  skillRating: number = 0;
+  @Input('skillsBind') skills: PortfolioResumeModel['expertise']['skillset'][];
+
+  //     |
+  //     ↑ 1 unit along the y-axis
+  // ----+----
+  //     |
+  //     |
+  unitVector: SVGPoint = null;
+
+  // To transform unit vector
+  transformMatrix: SVGMatrix = null;
 
   constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
-    // this.dummySkills = [
-    //   { name: 'HTML5', rating: 5 },
-    //   { name: 'CSS3', rating: 5 },
-    //   { name: 'JS', rating: 4.5 },
-    //   { name: 'Java', rating: 2.5 },
-    //   { name: 'Python', rating: 3 },
-    //   { name: 'MySQL', rating: 2 }
-    // ];
-
     this.initSVGElements();
   }
 
+  // To make the following properties ready
+  // 1. elementObject object
+  // 2. dimensionObject
+  // 3. unitVector
   initSVGElements() {
     this.elementObject = {
       // <svg id='svg-canvas'>
@@ -106,6 +112,8 @@ export class PortfolioMeterComponent implements OnInit {
           r: 150
         },
         sector: {
+
+          // 0 to 180
           angle: 135,
         }
       },
@@ -127,7 +135,9 @@ export class PortfolioMeterComponent implements OnInit {
     this.renderSVG();
   }
 
+  // To draw the SVG
   renderSVG(): void {
+
     // Setup the Rectangular Mask to be white
     this.renderer.setAttribute(this.elementObject['mask']['rMasterMask'], 'id', 'bg');
     this.renderer.setAttribute(this.elementObject['mask']['rMasterMask'], 'x', (0).toFixed(2));
@@ -145,6 +155,8 @@ export class PortfolioMeterComponent implements OnInit {
     this.renderer.appendChild(this.elementObject['base']['gIndicator'], this.elementObject['base']['cIndicator']);
 
     let pathD = '';
+
+    // Refer 'assets/media/images/svg-points.png' for more info
     let sectorEndpoints = {
       startPoint: {
         x: this.unitVector.matrixTransform(
@@ -169,6 +181,19 @@ export class PortfolioMeterComponent implements OnInit {
       chordLength: 2 * this.dimensionObject['meterScale'].circle.r * Math.sin(Math.PI * this.dimensionObject['meterScale'].sector.angle / 180 / 2),
       arcLength: this.dimensionObject['meterScale'].circle.r * this.dimensionObject['meterScale'].sector.angle * Math.PI / 180
     };
+
+    // Dynamic viewbox
+    let sViewBox = '';
+    if (sectorEndpoints.endPoint.y <= 10) {
+      sViewBox = '0 0 ' +
+        (this.dimensionObject['meterScale']['circle']['r'] * 2).toFixed(2) + ' ' +
+        (this.dimensionObject['meterScale']['circle']['r'] + (sectorEndpoints.endPoint.y + this.dimensionObject['indicator']['pinion']['radius'])).toFixed(2);
+    } else {
+      sViewBox = '0 0 ' +
+        (this.dimensionObject['meterScale']['circle']['r'] * 2).toFixed(2) + ' ' +
+        (this.dimensionObject['meterScale']['circle']['r'] + sectorEndpoints.endPoint.y).toFixed(2);
+    }
+    this.renderer.setAttribute(this.elementObject['svgCanvas'], 'viewBox', sViewBox);
 
     pathD = 'M ' + this.dimensionObject['meterScale'].circle.cx.toFixed(2) + ' ' + this.dimensionObject['meterScale'].circle.cy.toFixed(2) +
       ' l ' + (sectorEndpoints.startPoint.x).toFixed(2) + ' ' + (sectorEndpoints.startPoint.y).toFixed(2) +
@@ -226,8 +251,10 @@ export class PortfolioMeterComponent implements OnInit {
     this.renderer.appendChild(this.elementObject['overlay']['gPointer'], this.elementObject['overlay']['cPinion']);
   }
 
-  setSkillRating(skillIndex: number) {
-    this.skillRating = this.skills[skillIndex]['rating'];
+  // To handle needle indications when a different skill is selected
+  setSkillRating(eventData: MatSelectChange) {
+
+    this.skillRating = eventData.value ? eventData.value : 0;
 
     this.dimensionObject['indicator']['needle']['rotation'] = (this.dimensionObject['meterScale'].sector.angle / 2) + ((360 - this.dimensionObject['meterScale'].sector.angle) * this.skillRating / this.dimensionObject['ratingCount']) - (((360 - this.dimensionObject['meterScale'].sector.angle) / this.dimensionObject['ratingCount']) / 2)
 

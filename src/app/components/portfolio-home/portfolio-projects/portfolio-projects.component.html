@@ -1,0 +1,58 @@
+<div class="homepage-entity-holder projects-holder" #projects>
+  <div class="left-wrapper">
+    <div class="view-name-holder">
+      <div class="view-name">
+        <span>{{ oComponentAssets.assets.text.viewName}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="right-wrapper">
+    <div class="top-wrapper">
+      <div class="portfolio-project-grid-holder">
+        <div class="project-grid">
+          <!-- <div class="project-grid-cell"
+                 *ngFor="let singleProject of mResumeData.workExperience.projects; let index = index;"
+                 id="project-{{index + 1}}">
+              <ng-template>
+                <mat-card class="mat-elevation-z4">
+                  <mat-card-header>
+                    <mat-card-title>
+                      <span>{{ singleProject.description.title }}</span>
+                    </mat-card-title>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <span>{{ singleProject.description.overviews[0] }}</span>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button mat-raised-button>
+                      <span>{{ oComponentAssets.button.viewProject }}</span>
+                    </button>
+                  </mat-card-actions>
+                </mat-card>
+              </ng-template>
+              <span>{{ singleProject.description.title }}</span>
+              <span>{{ singleProject.description.overviews[0] }}</span>
+              <button mat-raised-button>
+                <span>{{ oComponentAssets.element.button.viewProject }}</span>
+              </button>
+            </div> -->
+          <div class="working">Working on this view</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-wrapper" *ngIf="!oComponentAssets.assets.flag.isLastView">
+      <div class="scroll-text-holder" (click)="scrollToNextView(projects)">
+        <div class="scroll-text">
+          <span>{{ oComponentAssets.common.text.scrollForMore | lowercase }}</span>
+        </div>
+        <div class="scroll-arrow">
+          <span>
+            <fa-icon
+                     [icon]="[oComponentAssets.common.icon.downArrow.prefix, oComponentAssets.common.icon.downArrow.name]">
+            </fa-icon>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="homepage-entity-holder biodata-holder" #introduction>
+  <div class="left-wrapper">
+    <div class="view-name-holder">
+      <div class="view-name">
+        <span>{{ oComponentAssets.assets.text.viewName }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="right-wrapper">
+    <div class="top-wrapper">
+      <div class="greeting-holder">
+        <div class="greeting-text">
+          <span>{{ oComponentAssets.assets.text.greetingText | lowercase }}</span>
+        </div>
+      </div>
+      <div class="name-holder">
+        <div class="name">
+          <span>{{ oComponentAssets.assets.text.fullName | portfolioName | lowercase }}</span>
+        </div>
+      </div>
+      <div class="description-holder">
+        <div class="description-question">
+          <span>{{ oComponentAssets.assets.text.description.question | lowercase }}</span>
+        </div>
+        <div class="description-short"
+             *ngFor="let singleDescription of oComponentAssets.assets.text.description.shortLines">
+          <span>{{ singleDescription | lowercase }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-wrapper" *ngIf="!oComponentAssets.assets.flag.isLastView">
+      <div class="scroll-text-holder" (click)="scrollToNextView(introduction)">
+        <div class="scroll-text-holder">
+          <div class="scroll-text">
+            <span>{{ oComponentAssets.common.text.scrollForMore | lowercase }}</span>
+          </div>
+          <div class="scroll-arrow">
+            <span>
+              <fa-icon
+                       [icon]="[oComponentAssets.common.icon.downArrow.prefix, oComponentAssets.common.icon.downArrow.name]">
+              </fa-icon>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
