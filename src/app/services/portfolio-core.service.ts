@@ -9,7 +9,11 @@ import { catchError, retry, concatMap } from 'rxjs/operators';
 })
 export class PortfolioCoreService {
 
-  constructor(private http: HttpClient) { }
+  sResumeURL: string;
+
+  constructor(private http: HttpClient) {
+    this.sResumeURL = 'assets/data/resume-data.json';
+  }
 
   handleError(error: HttpErrorResponse): Observable<string> {
 
@@ -24,12 +28,21 @@ export class PortfolioCoreService {
     return throwError('Unknown Error!');
   }
 
-  getHTTPResponseForURL(dataURL: string): Observable<any> {
-    return this.http.get<any>(dataURL, { observe: 'response' })
-      .pipe(
-        // concatMap(() => this.http.get<any>(assetURL, { observe: 'response' })),
-        retry(3),
-        catchError(this.handleError)
-      );
+  getHTTPResponseForURL(dataURL: string, options?: {}): Observable<any> {
+    if (options) {
+      return this.http.get<any>(dataURL, options)
+        .pipe(
+          // concatMap(() => this.http.get<any>(assetURL, { observe: 'response' })),
+          retry(3),
+          catchError(this.handleError)
+        );
+    } else {
+      return this.http.get<any>(dataURL, { observe: 'body' })
+        .pipe(
+          // concatMap(() => this.http.get<any>(assetURL, { observe: 'response' })),
+          retry(3),
+          catchError(this.handleError)
+        );
+    }
   }
 }

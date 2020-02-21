@@ -18,7 +18,7 @@ export class PortfolioProjectsComponent
   }
 
   ngOnInit() {
-    this.componentAssetService.childViews.push(this.childRef.nativeElement);
+    this.componentAssetService.childViewAssets.push(this.childRef.nativeElement);
     this.oComponentAssets['assets']['flag']['isLastView'] = this.oComponentAssets['views'].slice(-1)[0]['name'] === this.oComponentAssets['assets']['text']['viewName'] ? true : false;
   }
 

@@ -90,12 +90,12 @@ export class PortfolioHomeComponent implements OnInit, AfterViewInit, OnDestroy 
   }
 
   ngOnDestroy(): void {
-    this.assetsService.childViews = [];
+    this.assetsService.childViewAssets = [];
     this.crComponentRef.destroy();
   }
 
   scrollToTop(): void {
-    this.assetsService.childViews[0].scrollIntoView({ behavior: 'smooth' });
+    this.assetsService.childViewAssets[0].scrollIntoView({ behavior: 'smooth' });
   }
 
 }

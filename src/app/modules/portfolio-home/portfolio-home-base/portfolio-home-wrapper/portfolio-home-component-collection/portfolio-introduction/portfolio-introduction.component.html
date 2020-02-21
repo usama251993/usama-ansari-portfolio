@@ -1,0 +1,56 @@
+<div class="homepage-entity-holder biodata-holder" *ngIf="bIsDataLoaded; else loadingData;" #introduction>
+  <div class="left-wrapper">
+    <div class="view-name-holder">
+      <div class="view-name">
+        <span>{{ oIntroductionAsset.viewName }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="right-wrapper">
+    <div class="top-wrapper">
+      <div class="greeting-holder">
+        <div class="greeting-text">
+          <span>{{ oIntroductionAsset.oAsset.text.greetingText | lowercase }}</span>
+        </div>
+      </div>
+      <div class="name-holder">
+        <div class="name">
+          <span>{{ oIntroductionAsset.oAsset.text.fullName | portfolioName | lowercase }}</span>
+        </div>
+      </div>
+      <div class="description-holder">
+        <div class="description-question">
+          <span>{{ oIntroductionAsset.oAsset.text.description.question | lowercase }}</span>
+        </div>
+        <div class="description-short"
+             *ngFor="let singleDescription of oIntroductionAsset.oAsset.text.description.shortLines">
+          <span>{{ singleDescription | lowercase }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-wrapper">
+      <div class="scroll-text-holder">
+        <!-- <div class="bottom-wrapper" *ngIf="!oIntroductionAsset.oAsset.flag.isLastView">
+      <div class="scroll-text-holder" (click)="scrollToNextView(introduction)"> -->
+        <div class="scroll-text-holder">
+          <div class="scroll-text">
+            <span>{{ oIntroductionAsset.common.text.scrollForMore | lowercase }}</span>
+          </div>
+          <div class="scroll-arrow">
+            <span>
+              <fa-icon
+                       [icon]="[oIntroductionAsset.commonAssets[1].icon.prefix, oIntroductionAsset.commonAssets[1].icon.name]">
+              </fa-icon>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loadingData>
+  <div class="homepage-entity-holder">
+    <app-portfolio-loading></app-portfolio-loading>
+  </div>
+</ng-template>

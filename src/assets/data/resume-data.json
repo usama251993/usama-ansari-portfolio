@@ -182,48 +182,6 @@
       },
       {
         "tenure": {
-          "from": "2015-06-30T18:30:00.000Z",
-          "to": "2019-09-30T18:30:00.000Z"
-        },
-        "description": {
-          "title": "ENOVIA PLM",
-          "role": "Senior Software Engineer",
-          "overviews": [
-            "ENOVIA is a Product Lifecycle Management software which is developed and maintained by Dassault Systems",
-            "This project involves development and support of two modules of ENOVIA PLM, namely ENOVIA Costing and Analytics Foundation and ENOVIA Buyer Analytics",
-            "The former module enables user to analyze the cost of an object right from where it has been created up to its time of release",
-            "The latter module helps user decide the best supplier for the materials quoted for outsourcing"
-          ],
-          "responsibilities": [
-            "Developed Cost Analytics module with all the user forms designed in Angular",
-            "Generation of graphs and reports using the data provided by user",
-            "Handle stream of dynamic data required for generation of reports",
-            "Configuration of indications on the reports to alert user about cost excess",
-            "Testing of Web Application in different browsers and OS",
-            "Reporting, fixing and retesting of defects, if found",
-            "Updating the scripts as per the requirements",
-            "Creating documentation about the activities undertaken",
-            "Maintain the script to uninstall the schema while retaining the data",
-            "Handle the smooth transition of project over to the client",
-            "Source control management of code and documents"
-          ],
-          "skills": [
-            "Angular 5",
-            "RxJS",
-            "Material Design",
-            "Microsoft Visual Studio Code",
-            "Eclipse Oxygen",
-            "Java 6",
-            "Apache TomCat",
-            "Windows (7 / 8 / 10 / Server 2008R2 / Server 2012 R2)",
-            "Linux Enterprise (SuSE and Redhat)",
-            "Tortoise SVN",
-            "WebEx for collaboration"
-          ]
-        }
-      },
-      {
-        "tenure": {
           "from": "2018-03-31T18:30:00.000Z",
           "to": "2018-08-31T18:30:00.000Z"
         },

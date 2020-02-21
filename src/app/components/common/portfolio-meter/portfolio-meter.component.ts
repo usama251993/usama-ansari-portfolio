@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, Renderer2, Input } from '@angular/core';
-import { PortfolioResumeModel } from 'src/app/shared/models/master/portfolio-resume.model';
+import { IPortfolioResumeModel } from 'src/app/shared/models/resume/master/portfolio-resume.model';
 import { MatSelectChange } from '@angular/material';
 
 @Component({
@@ -27,7 +27,7 @@ export class PortfolioMeterComponent implements OnInit {
 
   // Skill
   skillRating: number = 0;
-  @Input('skillsBind') skills: PortfolioResumeModel['expertise']['skillset'][];
+  @Input('skillsBind') skills: IPortfolioResumeModel['expertise']['skillset'][];
 
   //     |
   //     ↑ 1 unit along the y-axis

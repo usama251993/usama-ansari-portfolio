@@ -5,7 +5,7 @@ import {
   MAT_TOOLTIP_DEFAULT_OPTIONS
 } from '@angular/material';
 
-import { PortfolioResumeModel } from 'src/app/shared/models/master/portfolio-resume.model';
+import { IPortfolioResumeModel } from 'src/app/shared/models/resume/master/portfolio-resume.model';
 import { PortfolioCoreService } from 'src/app/services/portfolio-core.service';
 import { BreakpointObserver, BreakpointState, Breakpoints } from '@angular/cdk/layout';
 
@@ -27,7 +27,7 @@ export const tooltipDefaults: MatTooltipDefaultOptions = {
   ]
 })
 export class PortfolioAboutComponent implements OnInit {
-  resumeData: PortfolioResumeModel = null;
+  resumeData: IPortfolioResumeModel = null;
   bIsDataLoaded: boolean = false;
   resumeURL: string = '';
   bIsEnoughViewport: boolean = false;
@@ -49,9 +49,9 @@ export class PortfolioAboutComponent implements OnInit {
     this.resumeURL = 'assets/data/resume-data.json';
     this.portfolioService
       .getHTTPResponseForURL(this.resumeURL)
-      .subscribe((response: HttpResponse<PortfolioResumeModel>) => {
+      .subscribe((response: HttpResponse<IPortfolioResumeModel>) => {
         this.resumeData = {
-          ...(response['body'] as PortfolioResumeModel)
+          ...(response['body'] as IPortfolioResumeModel)
         };
         setTimeout(() => {
           this.bIsDataLoaded = true;

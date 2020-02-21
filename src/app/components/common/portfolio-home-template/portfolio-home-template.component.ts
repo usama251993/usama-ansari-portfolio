@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { PortfolioResumeModel } from 'src/app/shared/models/master/portfolio-resume.model';
+import { IPortfolioResumeModel } from 'src/app/shared/models/resume/master/portfolio-resume.model';
 import { PortfolioAssetsService } from 'src/app/services/portfolio-assets.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { PortfolioAssetsService } from 'src/app/services/portfolio-assets.servic
 export class PortfolioHomeTemplateComponent implements OnInit {
 
   @Input() oComponentAssets: any;
-  @Input() mResumeData: PortfolioResumeModel;
+  @Input() mResumeData: IPortfolioResumeModel;
 
   // This service is required by child components
   constructor(private assetService: PortfolioAssetsService) { }

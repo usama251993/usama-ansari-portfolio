@@ -1,4 +1,4 @@
-<div class="portfolio-navbar-container">
+<!-- <div class="portfolio-navbar-container">
   <div class="portfolio-navbar"
        [ngClass]="{ 'navbar-mobile': navbarState.bIsMobile, 'navbar-active': navbarState.bIsActive }">
     <div class="navbar-trigger-holder" *ngIf="navbarState.bIsMobile" (click)="toggleNavbar()">
@@ -19,9 +19,29 @@
         <div class="navbar-menu-text">
           <span>{{ singleContent.detail.content }}</span>
         </div>
-        <div class="navbar-menu-icon">
+        <div class="navbar-menu-icon" *ngIf="navbarState.bHasIcons">
           <fa-icon [icon]="[singleContent.icon.prefix, singleContent.icon.name]"
                    [size]="singleContent.icon.transform.size" [rotate]="singleContent.icon.transform.rotate"></fa-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="portfolio-navbar-container">
+  <div class="portfolio-navbar">
+    <div class="navbar-trigger-holder" *ngIf="oNavbar.state.bIsMobile" (click)="toggleNavbar(oNavbar.state.bIsActive)">
+      <ng-container *ngFor="let singleTrigger of oNavbar.triggers">
+        <div class="navbar-trigger" id="{{singleTrigger.name}}-trigger" *ngIf="singleTrigger.show">
+          <fa-icon [icon]="[singleTrigger.icon.prefix, singleTrigger.icon.name]"
+                   [size]="singleTrigger.icon.transform.size"></fa-icon>
+        </div>
+      </ng-container>
+    </div>
+    <div class="navbar-menu-holder" *ngIf="!oNavbar.state.bIsMobile || oNavbar.state.bIsActive">
+      <div class="navbar-menu" *ngFor="let singleContent of oNavbar.contents">
+        <div class="navbar-menu-text">
+          <span>{{ singleContent.detail.content }}</span>
         </div>
       </div>
     </div>

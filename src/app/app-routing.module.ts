@@ -1,25 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PortfolioHomeComponent } from './components/portfolio-home/portfolio-home.component';
-import { PortfolioAboutComponent } from './components/portfolio-about/portfolio-about.component';
-import { PortfolioProfileDocumentsComponent } from './components/portfolio-profile-documents/portfolio-profile-documents.component';
 import { PortfolioErrorComponent } from './components/common/portfolio-error/portfolio-error.component';
 
 const routes: Routes = [
   {
     path: 'home',
-    component: PortfolioHomeComponent
-    // children: [ ]
+    loadChildren: () => import('./modules/portfolio-home/portfolio-home.module').then(myModule => myModule.PortfolioHomeModule)
   },
   {
-    path: 'about',
-    component: PortfolioAboutComponent,
-    pathMatch: 'full'
+    path: 'social',
+    loadChildren: () => import('./modules/portfolio-social/portfolio-social.module').then(myModule => myModule.PortfolioSocialModule)
   },
   {
-    path: 'documents',
-    component: PortfolioProfileDocumentsComponent
+    path: 'interests',
+    loadChildren: () => import('./modules/portfolio-interests/portfolio-interests.module').then(myModule => myModule.PortfolioInterestsModule)
   },
   {
     path: '',

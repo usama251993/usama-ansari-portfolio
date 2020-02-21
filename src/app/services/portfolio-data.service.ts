@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpResponse } from '@angular/common/http';
 
 import { PortfolioCoreService } from './portfolio-core.service';
-import { PortfolioResumeModel } from '../shared/models/master/portfolio-resume.model';
+import { IPortfolioResumeModel } from '../shared/models/resume/master/portfolio-resume.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PortfolioDataService {
-  resumeData: PortfolioResumeModel = null;
+  resumeData: IPortfolioResumeModel = null;
   bIsDataLoaded: boolean = false;
   resumeURL: string = '';
 
@@ -21,9 +21,9 @@ export class PortfolioDataService {
 
     this.portfolioCore
       .getHTTPResponseForURL(this.resumeURL)
-      .subscribe((response: HttpResponse<PortfolioResumeModel>) => {
+      .subscribe((response: HttpResponse<IPortfolioResumeModel>) => {
         this.resumeData = {
-          ...(response['body'] as PortfolioResumeModel)
+          ...(response['body'] as IPortfolioResumeModel)
         };
         setTimeout(() => {
           this.bIsDataLoaded = true;

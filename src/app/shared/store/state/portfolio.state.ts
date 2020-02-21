@@ -1,7 +1,8 @@
-import { PortfolioResumeModel } from '../../models/master/portfolio-resume.model';
+import { IPortfolioResumeModel } from '../../models/resume/master/portfolio-resume.model';
 
-export interface PortfolioResumeState {
-  resumeData: PortfolioResumeModel;
+
+export interface IPortfolioResumeState {
+  resumeData: IPortfolioResumeModel;
 }
 
 export const initialPortfolioState = {

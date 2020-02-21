@@ -1,3 +1,109 @@
+// div {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// *.hidden {
+//   display: none;
+// }
+
+// div.portfolio-navbar-container {
+//   z-index: 2;
+
+//   div.portfolio-navbar {
+//     color: #fafafa;
+
+//     div.navbar-trigger-holder {
+//       div.navbar-trigger {
+//         padding: 16px;
+//         cursor: pointer;
+//       }
+//     }
+
+//     div.navbar-menu-holder {
+
+//       div.navbar-menu {
+//         cursor: pointer;
+//         flex-direction: row;
+//         justify-content: space-between;
+//         align-items: center;
+//         transition: 250ms;
+
+//         div.navbar-menu-text {
+//           transition: 250ms;
+//           transition-delay: 100ms;
+//           opacity: 0;
+//           transform: translateX(50%);
+//           padding: 16px;
+//           flex: 1;
+//           text-align: right;
+//         }
+
+//         div.navbar-menu-icon {
+//           padding: 16px;
+
+//         }
+
+//         &.active {
+//           font-weight: 700;
+//           // color: #4285f4;
+//         }
+
+//         &:hover {
+//           color: #4285f4;
+
+//           div.navbar-menu-text {
+//             transform: translateX(20%);
+//             opacity: 1;
+//           }
+//         }
+//       }
+//     }
+
+//     &.navbar-mobile {
+//       &.navbar-active {
+//         position: fixed;
+//         top: 0px;
+//         bottom: 0px;
+//         left: 0px;
+//         right: 0px;
+//         width: 100vw;
+//         height: 100vh;
+//         justify-content: center;
+//         align-items: center;
+//         background-color: #303030;
+//         z-index: 3;
+
+//         div.navbar-trigger-holder {
+//           div.navbar-trigger {
+//             position: fixed;
+//             top: 0px;
+//             right: 0px;
+//             justify-content: center;
+//             align-items: center;
+//           }
+//         }
+
+//         div.navbar-menu-holder {
+//           display: flex;
+
+//           div.navbar-menu {
+//             flex-direction: row-reverse;
+//             justify-content: flex-end;
+
+//             div.navbar-menu-text {
+//               transition: none;
+//               opacity: 1;
+//               text-align: left;
+//               transform: translateX(0%);
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
 div {
   display: flex;
   flex-direction: column;
@@ -8,14 +114,17 @@ div {
 }
 
 div.portfolio-navbar-container {
-  z-index: 2;
+  z-index: 5;
 
   div.portfolio-navbar {
-    color: #fafafa;
+    // color: #fafafa;
 
     div.navbar-trigger-holder {
+      justify-content: center;
+      align-items: flex-end;
+
       div.navbar-trigger {
-        padding: 16px;
+        padding: 8px;
         cursor: pointer;
       }
     }
@@ -24,82 +133,81 @@ div.portfolio-navbar-container {
 
       div.navbar-menu {
         cursor: pointer;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        // flex-direction: row;
+        justify-content: center;
+        // align-items: flex-end;
         transition: 250ms;
 
         div.navbar-menu-text {
-          transition: 250ms;
-          transition-delay: 100ms;
-          opacity: 0;
-          transform: translateX(50%);
-          padding: 16px;
+          //   transition: 250ms;
+          //   transition-delay: 100ms;
+          //   opacity: 0;
+          //   transform: translateX(50%);
+          padding: 8px;
           flex: 1;
           text-align: right;
         }
 
-        div.navbar-menu-icon {
-          padding: 16px;
+        // div.navbar-menu-icon {
+        //   padding: 16px;
 
-        }
+        // }
 
-        &.active {
-          font-weight: 700;
-          // color: #4285f4;
-        }
+        // &.active {
+        //   font-weight: 700;
+        //   // color: #4285f4;
+        // }
 
         &:hover {
           color: #4285f4;
 
           div.navbar-menu-text {
-            transform: translateX(20%);
-            opacity: 1;
+            font-weight: 700;
           }
         }
       }
     }
 
-    &.navbar-mobile {
-      &.navbar-active {
-        position: fixed;
-        top: 0px;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-        width: 100vw;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        background-color: #303030;
-        z-index: 3;
+    // &.navbar-mobile {
+    //   &.navbar-active {
+    //     position: fixed;
+    //     top: 0px;
+    //     bottom: 0px;
+    //     left: 0px;
+    //     right: 0px;
+    //     width: 100vw;
+    //     height: 100vh;
+    //     justify-content: center;
+    //     align-items: center;
+    //     background-color: #303030;
+    //     z-index: 3;
 
-        div.navbar-trigger-holder {
-          div.navbar-trigger {
-            position: fixed;
-            top: 0px;
-            right: 0px;
-            justify-content: center;
-            align-items: center;
-          }
-        }
+    //     div.navbar-trigger-holder {
+    //       div.navbar-trigger {
+    //         position: fixed;
+    //         top: 0px;
+    //         right: 0px;
+    //         justify-content: center;
+    //         align-items: center;
+    //       }
+    //     }
 
-        div.navbar-menu-holder {
-          display: flex;
+    //     div.navbar-menu-holder {
+    //       display: flex;
 
-          div.navbar-menu {
-            flex-direction: row-reverse;
-            justify-content: flex-end;
+    //       div.navbar-menu {
+    //         flex-direction: row-reverse;
+    //         justify-content: flex-end;
 
-            div.navbar-menu-text {
-              transition: none;
-              opacity: 1;
-              text-align: left;
-              transform: translateX(0%);
-            }
-          }
-        }
-      }
-    }
+    //         div.navbar-menu-text {
+    //           transition: none;
+    //           opacity: 1;
+    //           text-align: left;
+    //           transform: translateX(0%);
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
