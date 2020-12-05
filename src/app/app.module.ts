@@ -1,54 +1,31 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core'
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
-import { AppMaterialModule } from './app-material/app-material.module';
-import {
-  FontAwesomeModule,
-  FaIconLibrary
-} from '@fortawesome/angular-fontawesome';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import { AppStateModule } from '@shared/modules/state/state.module'
+import { AppSharedModule } from '@shared/shared.module'
 
-import { PortfolioErrorComponent } from './components/common/portfolio-error/portfolio-error.component';
-import { PortfolioNavbarComponent } from './components/common/portfolio-navbar/portfolio-navbar.component';
-import { PortfolioScrollbarComponent } from './components/common/portfolio-scrollbar/portfolio-scrollbar.component';
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
 
-import { PortfolioCoreService } from './services/portfolio-core.service';
-import { PortfolioAssetsService } from './services/portfolio-assets.service';
+const DECLARATIONS = [AppComponent]
+
+const IMPORTS = [
+  BrowserModule,
+  BrowserAnimationsModule,
+  AppRoutingModule,
+  AppSharedModule
+]
+
+const PROVIDERS = []
+
+const BOOTSTRAP = [AppComponent]
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PortfolioErrorComponent,
-    PortfolioNavbarComponent,
-    PortfolioScrollbarComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    AppMaterialModule,
-    FontAwesomeModule,
-    HttpClientModule
-  ],
-  providers: [
-    PortfolioCoreService,
-    PortfolioAssetsService
-  ],
-  bootstrap: [AppComponent],
-  entryComponents: [
-  ]
+  declarations: [...DECLARATIONS],
+  imports: [...IMPORTS],
+  providers: [...PROVIDERS],
+  bootstrap: [...BOOTSTRAP]
 })
-export class AppModule {
-  constructor(faLibrary: FaIconLibrary) {
-    faLibrary.addIconPacks(fas);
-    faLibrary.addIconPacks(far);
-    faLibrary.addIconPacks(fab);
-  }
-}
+export class AppModule { }

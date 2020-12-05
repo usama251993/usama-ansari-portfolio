@@ -1,51 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+// Angular Theming
+// @import "@angular/material/prebuilt-themes/purple-green.css";
+@import "assets/styles/app-themes.scss";
 
-// @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
-// @import '@angular/material/prebuilt-themes/indigo-pink.css';
-// @import '@angular/material/prebuilt-themes/pink-bluegrey.css';
-@import '@angular/material/prebuilt-themes/purple-green.css';
+// Bootstrap
+@import "assets/styles/app-bootstrap.scss";
 
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  // font-family: 'Roboto', 'Helvetica Neue', sans-serif;
-  // font-family: 'Segoe UI', 'Calibri', sans-serif;
-  font-family: 'Fira Sans', 'Calibri', sans-serif;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-// /* width */
-// ::-webkit-scrollbar {
-//   position: fixed;
-//   top: 0;
-//   bottom: 0;
-//   right: 0;
-//   width: 4px;
-//   height: 4px;
-// }
-
-// /* Track */
-// ::-webkit-scrollbar-track {
-//   opacity: 1;
-// }
-
-// /* Handle */
-// ::-webkit-scrollbar-thumb {
-//   background: gray;
-//   border-radius: 0px;
-// }
-
-/* Handle on hover */
-// ::-webkit-scrollbar-thumb:hover {
-//   border-radius: 16px;
-// }
+// Global styles
+@import "assets/styles/app-styles.scss";
