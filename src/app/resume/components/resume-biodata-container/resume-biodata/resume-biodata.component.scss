@@ -1,0 +1,14 @@
+div.p-bd-container {
+  div.p-bd-photo-holder {
+    width: 256px;
+    height: 256px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+      position: relative;
+      top: -36px;
+      left: -6px;
+    }
+  }
+}

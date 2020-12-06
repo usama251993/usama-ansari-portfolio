@@ -1,0 +1,14 @@
+<div class="d-flex align-items-center
+            p-bd-container">
+  <div class="my-2
+              p-bd-photo-holder">
+    <img [src]="biodata.photo.src"
+         [alt]="biodata.photo.alt"
+         class="img-fluid">
+  </div>
+  <div class="my-2">
+    <p class="my-2">{{ biodata.name.first }} {{ biodata.name.last }}</p>
+    <p class="my-2">{{ biodata.title }}</p>
+    <p class="my-2">{{ biodata.about }}</p>
+  </div>
+</div>

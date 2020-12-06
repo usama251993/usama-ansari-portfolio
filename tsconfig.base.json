@@ -22,8 +22,8 @@
       "@core/*": [
         "src/app/core/*"
       ],
-      "@home/*": [
-        "src/app/home/*"
+      "@resume/*": [
+        "src/app/resume/*"
       ],
       "@environments/*": [
         "src/environments/*"

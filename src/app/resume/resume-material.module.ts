@@ -26,7 +26,7 @@ import { NgModule } from '@angular/core'
 // import { MatDividerModule } from '@angular/material/divider'
 // import { MatExpansionModule } from '@angular/material/expansion'
 // import { MatGridListModule } from '@angular/material/grid-list'
-// import { MatListModule } from '@angular/material/list'
+import { MatListModule } from '@angular/material/list'
 // import { MatStepperModule } from '@angular/material/stepper'
 // import { MatTabsModule } from '@angular/material/tabs'
 // import { MatTreeModule } from '@angular/material/tree'
@@ -71,7 +71,7 @@ const COMMON = [
   // MatDividerModule,
   // MatExpansionModule,
   // MatGridListModule,
-  // MatListModule,
+  MatListModule,
   // MatStepperModule,
   // MatTabsModule,
   // MatTreeModule,
@@ -99,4 +99,4 @@ const EXPORTS = [...COMMON]
   imports: [...IMPORTS],
   exports: [...EXPORTS],
 })
-export class AppMaterialModule { }
+export class ResumeMaterialModule { }

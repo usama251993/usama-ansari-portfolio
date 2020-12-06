@@ -10,8 +10,12 @@ const routes: Routes = [
     component: AppShellComponent,
     children: [
       {
+        path: CORE_ROUTES.RESUME,
+        loadChildren: () => import('@resume/resume.module').then(_ => _.ResumeModule)
+      },
+      {
         path: CORE_ROUTES.EMPTY,
-        loadChildren: () => import('@home/home.module').then(_ => _.HomeModule)
+        redirectTo: CORE_ROUTES.RESUME
       }
     ]
   }
