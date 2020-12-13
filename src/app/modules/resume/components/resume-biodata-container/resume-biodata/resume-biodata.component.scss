@@ -1,0 +1,30 @@
+div.p-bd-container {
+  display: grid;
+  // grid-template-columns: 3fr 7fr;
+  grid-template-columns: 3fr 4fr 3fr;
+  align-items: center;
+
+  div.p-bd-photo-holder {
+    width: 256px;
+    height: 256px;
+    overflow: hidden;
+    border-radius: 50%;
+    justify-self: center;
+
+    img {
+      position: relative;
+      top: -36px;
+      left: -6px;
+    }
+  }
+
+  div.p-bd-stack-holder {
+    display: grid;
+    justify-content: space-around;
+    grid-template: 64px 64px / 64px 64px;
+
+    div.p-bd-stack-image-holder {
+      align-self: center;
+    }
+  }
+}

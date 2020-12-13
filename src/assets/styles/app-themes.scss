@@ -1,6 +1,7 @@
 @import "~@angular/material/theming";
 
-@import "@angular/material/prebuilt-themes/purple-green.css";
+// @import "@angular/material/prebuilt-themes/purple-green.css";
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 @include mat-core();
 
@@ -9,14 +10,32 @@
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
+
   *.app-bg-primary {
     background-color: mat-color($primary);
   }
+
   *.app-bg-accent {
     background-color: mat-color($accent);
   }
+
   *.app-bg-warn {
     background-color: mat-color($warn);
+  }
+
+  *.app-bg-dark {
+    background-color: #303030;
+    color: #fafafa;
+  }
+
+  *.app-bg-black {
+    background-color: #121212;
+    color: #fafafa;
+  }
+
+  *.app-bg-light {
+    background-color: #fafafa;
+    color: #000000de;
   }
 }
 

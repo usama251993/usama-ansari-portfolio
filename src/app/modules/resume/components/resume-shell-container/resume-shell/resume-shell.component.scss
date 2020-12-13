@@ -1,0 +1,14 @@
+div.p-rs-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 3fr 7fr;
+  grid-row-gap: 24px;
+
+  div.p-rs-biodata-container {
+    grid-column: 1/-1;
+  }
+}
+
+@page {
+  size: A4;
+}

@@ -23,7 +23,7 @@
         "src/app/core/*"
       ],
       "@resume/*": [
-        "src/app/resume/*"
+        "src/app/modules/resume/*"
       ],
       "@environments/*": [
         "src/environments/*"
