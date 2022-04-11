@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common'
 
 import { ResumeRoutingModule } from './resume-routing.module'
 import { ResumeMaterialModule } from './resume-material.module'
+import { ResumeStateModule } from './store/state/resume-state.module'
 
 import { ResumeShellContainerComponent } from './components/resume-shell-container/resume-shell-container.component'
 import { ResumeShellComponent } from './components/resume-shell-container/resume-shell/resume-shell.component'
@@ -27,12 +28,14 @@ const DECLARATIONS = [
   ResumeSkillContainerComponent, ResumeSkillComponent
 ]
 
+const IMPORTS = [
+  CommonModule,
+  ResumeRoutingModule,
+  ResumeMaterialModule,
+  ResumeStateModule
+]
 @NgModule({
   declarations: [...DECLARATIONS],
-  imports: [
-    CommonModule,
-    ResumeRoutingModule,
-    ResumeMaterialModule
-  ]
+  imports: [...IMPORTS],
 })
 export class ResumeModule { }

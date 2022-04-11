@@ -9,10 +9,10 @@ interface AppRouterSerializerModel {
 
 export class AppRouterSerializer implements RouterStateSerializer<AppRouterSerializerModel> {
   serialize(routerState: RouterStateSnapshot) {
+    const { url } = routerState
     let _route: ActivatedRouteSnapshot = routerState.root
     while (!!_route.firstChild) { _route = _route.firstChild }
-    const { url, root: { queryParams, data } } = routerState
-    const { params } = _route
+    const { queryParams, data, params } = _route
     return { url, params, queryParams, data }
   }
 }

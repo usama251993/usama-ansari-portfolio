@@ -20,11 +20,11 @@ div.p-bd-container {
 
   div.p-bd-stack-holder {
     display: grid;
-    justify-content: space-around;
-    grid-template: 64px 64px / 64px 64px;
+    // justify-content: space-around;
+    // grid-template: 64px 64px / 64px 64px;
 
-    div.p-bd-stack-image-holder {
-      align-self: center;
-    }
+    // div.p-bd-stack-image-holder {
+    //   align-self: center;
+    // }
   }
 }

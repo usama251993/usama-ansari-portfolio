@@ -8,22 +8,22 @@
   </div>
   <div class="p-bd-text-holder">
     <div class="p-bd-name">
-      <p class="mat-display-3">{{ biodata.asset.name.first }} {{ biodata.asset.name.last }}
+      <p class="mat-display-3">{{ biodata.about.name.first }} {{ biodata.about.name.last }}
       </p>
     </div>
     <div class="p-bd-title">
-      <p class="mat-headline">{{ biodata.asset.title | uppercase }}</p>
+      <p class="mat-headline">{{ biodata.about.title | uppercase }}</p>
     </div>
   </div>
 
-  <!-- <div class="p-bd-stack-holder">
-    <ng-container *ngFor="let _ of biodata.stack.technologies">
+  <div class="p-bd-stack-holder">
+    <!-- <ng-container *ngFor="let _ of biodata.stack.technologies">
       <div class="p-bd-stack-image-holder">
         <img class="img-fluid"
              [src]="_.icon.src"
              [alt]="_.icon.alt">
       </div>
-    </ng-container>
-  </div> -->
+    </ng-container> -->
+  </div>
 
 </div>

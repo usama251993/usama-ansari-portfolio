@@ -7,9 +7,11 @@ import { AppCoreRoutingModule } from './core-routing.module'
 import { CoreStateModule } from './state/core-state.module'
 
 import { AppShellComponent } from './components/shell/shell.component'
+
 import { AppNavbarContainerComponent } from './components/navbar-container/navbar-container.component'
-import { AppNavbarComponent } from './components/navbar-container/navbar/navbar.component';
-import { ErrorContainerComponent } from './components/error-container/error-container.component';
+import { AppNavbarComponent } from './components/navbar-container/navbar/navbar.component'
+
+import { ErrorContainerComponent } from './components/error-container/error-container.component'
 import { ErrorComponent } from './components/error-container/error/error.component'
 
 

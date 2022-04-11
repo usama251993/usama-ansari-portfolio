@@ -1,5 +1,5 @@
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity'
-import { NavbarAssetsModel } from '../../models/navbar.model'
+import { NavbarAssetsModel } from '../../models/navbar/navbar.model'
 
 import * as fromNavbarActions from '../actions/navbar.action'
 import { CORE_ACTIONS } from '../types/navbar.type'
@@ -17,7 +17,7 @@ export function reducer(
 ): State {
   switch (action.type) {
     case CORE_ACTIONS.NAVBAR_ASSETS_SUCCESS:
-      return _ADAPTER.upsertOne((<{assets: NavbarAssetsModel}>action.payload).assets, state)
+      return _ADAPTER.upsertOne((<{ assets: NavbarAssetsModel }>action.payload).assets, state)
     case CORE_ACTIONS.NAVBAR_ASSETS_FAILED:
       return _ADAPTER.addOne(null, state)
     default:

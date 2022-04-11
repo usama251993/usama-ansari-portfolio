@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core'
 
 import { BehaviorSubject, Observable } from 'rxjs'
 
-import { INITIAL_ASSETS_MODEL, NavbarAssetsModel } from '../../models/navbar.model'
-import {CoreService} from '../core.service'
+import { INITIAL_ASSETS_MODEL, NavbarAssetsModel } from '../../models/navbar/navbar.model'
+import { CoreService } from '../core.service'
 
 @Injectable({
   providedIn: 'root'

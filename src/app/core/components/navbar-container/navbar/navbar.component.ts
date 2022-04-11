@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core'
 
 import { BehaviorSubject } from 'rxjs'
 
-import { NavbarAssetsModel } from '@core/models/navbar.model'
+import { NavbarAssetsModel } from '@core/models/navbar/navbar.model'
 
 @Component({
   selector: 'app-navbar',

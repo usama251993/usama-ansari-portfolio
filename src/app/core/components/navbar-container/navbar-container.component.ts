@@ -10,7 +10,7 @@ import * as fromNavbarActions from '@core/state/actions/navbar.action'
 import { NAVBAR_ASSET_SELECTOR } from '@core/state/selectors/navbar.selector'
 
 import { NavbarService } from '@core/services/navbar/navbar.service'
-import { NavbarAssetsModel } from '@core/models/navbar.model'
+import { NavbarAssetsModel } from '@core/models/navbar/navbar.model'
 
 @Component({
   selector: 'app-navbar-container',

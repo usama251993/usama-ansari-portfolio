@@ -4,31 +4,26 @@ import { BehaviorSubject, Observable } from 'rxjs'
 
 import { ResumeBiodataModel, INITIAL_RESUME_BIODATA } from '@resume/models/resume-biodata.model'
 import { ResumeCoreService } from '../resume-core.service'
+import { ResumeBiodataComponentStore } from '@resume/store/component-store/resume-biodata/resume-biodata.component-store'
 
 @Injectable({
   providedIn: 'root'
 })
 export class ResumeBiodataService {
 
-  // private _assets$: BehaviorSubject<ResumeBiodataAssetsModel> = new BehaviorSubject<ResumeBiodataAssetsModel>(INITIAL_BIODATA_ASSETS_MODEL)
   private _biodata$: BehaviorSubject<ResumeBiodataModel> = new BehaviorSubject<ResumeBiodataModel>(INITIAL_RESUME_BIODATA)
-
-  // private _assets: ResumeBiodataAssetsModel
   private _biodata: ResumeBiodataModel
 
   constructor(
-    private _coreService: ResumeCoreService
+    private _coreService: ResumeCoreService,
+    // private _componentStore: ResumeBiodataComponentStore
   ) {
-    // this._assets = {
-
-    // }
-
     this._biodata = {
       photo: {
         src: 'assets/media/images/usama-mini.jpg',
         alt: 'Usama Ansari'
       },
-      asset: {
+      about: {
         name: {
           first: 'Usama', last: 'Ansari'
         },
@@ -98,19 +93,7 @@ export class ResumeBiodataService {
     }
   }
 
-  // fetchAssets(): void {
-  // this._assets$.next(this._assets)
-  // }
-
-  // watchAssets$(): Observable<ResumeBiodataAssetsModel> {
-  // return this._assets$.asObservable()
-  // }
-
-  fetchBiodata(): void {
-    this._biodata$.next(this._biodata)
-  }
-
-  watchBiodata$(): Observable<ResumeBiodataModel> {
-    return this._biodata$.asObservable()
+  fetchBiodata(): ResumeBiodataModel {
+    return this._biodata
   }
 }
